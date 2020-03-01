@@ -2,11 +2,13 @@ var path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: path.join(__dirname, 'srcjs', 'time.jsx'),
+    entry: {
+        time: path.join(__dirname, 'srcjs', 'time.jsx'),
+        'switch': path.join(__dirname, 'srcjs', 'switch.jsx')
+    },
     output: {
-        path: path.join(__dirname, 'inst', 'www', '${package}', 'time'),
-        path: path.join(__dirname, 'inst/www/shinieR/time'),
-        filename: 'time.js'
+        path: path.join(__dirname, 'inst/www/shinieR'),
+        filename: '[name]/[name].js'
     },
     module: {
         rules: [

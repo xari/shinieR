@@ -3,17 +3,24 @@ library(shinieR)
 
 ui <- fluidPage(
   titlePanel("reactR Input Example"),
-  timeInput("textInput",
+  timeInput("timeInput",
             configuration = list(disableClock = TRUE,
                                  format = "HH:mm",
                                  hourPlaceholder = "HH",
                                  minutePlaceholder = "MM")),
-  textOutput("textOutput")
+  textOutput("timeTextOutput"),
+  switchInput("switchInput",
+            configuration = list()),
+  textOutput("switchTextOutput")
 )
 
 server <- function(input, output, session) {
-  output$textOutput <- renderText({
-    sprintf("You entered: %s", input$textInput)
+  output$timeTextOutput <- renderText({
+    sprintf("You entered: %s", input$timeInput)
+  })
+
+  output$switchTextOutput <- renderText({
+    sprintf("You entered: %s", input$switchInput)
   })
 }
 
