@@ -12,7 +12,7 @@ timeInput <- function(inputId,
                       configuration = NULL) {
   reactR::createReactShinyInput(
     inputId,
-    "time",
+    "time form-control",
     htmltools::htmlDependency(
       name = "time-input",
       version = "1.0.0",
