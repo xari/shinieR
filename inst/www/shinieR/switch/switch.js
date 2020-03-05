@@ -2220,7 +2220,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 var SwitchInput = function SwitchInput(_ref) {
-  var configuration = _ref.configuration,
+  var _ref$configuration = _ref.configuration,
+      configuration = _ref$configuration === void 0 ? NA : _ref$configuration,
       value = _ref.value,
       setValue = _ref.setValue;
   return React.createElement(react_toggle__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({

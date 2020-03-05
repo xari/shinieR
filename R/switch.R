@@ -12,13 +12,14 @@ switchInput <- function(inputId,
                         configuration = NULL) {
   reactR::createReactShinyInput(
     inputId,
-    "switch",
+    "switch form-control switch shiny-bound-input",
     htmltools::htmlDependency(
       name = "switch-input",
       version = "1.0.0",
       src = "www/shinieR/switch",
       package = "shinieR",
-      script = "switch.js"
+      script = "switch.js",
+      stylesheet = "switch.css"
     ),
     default,
     configuration,

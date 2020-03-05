@@ -1,0 +1,9 @@
+.form-control.switch {
+  background: transparent;
+  border-color: transparent;
+  -moz-box-shadow:    none;
+  -webkit-box-shadow: none;
+  box-shadow:         none;
+  padding-left: 0;
+  padding-right: 0;
+}
