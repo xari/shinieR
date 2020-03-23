@@ -2226,7 +2226,12 @@ var SwitchInput = function SwitchInput(_ref) {
       setValue = _ref.setValue;
   return React.createElement(react_toggle__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
     onChange: function onChange(e) {
-      return setValue(e.target.checked);
+      setValue(e.target.checked);
+      var labelNode = document.querySelector("[for = \"".concat(configuration.inputId, "\"]"));
+      var label = labelNode.textContent;
+      var altLabel = labelNode.dataset.alt;
+      labelNode.textContent = altLabel;
+      labelNode.dataset.alt = label;
     },
     value: value
   }, configuration));

@@ -4,7 +4,13 @@
 \alias{switchInput}
 \title{<Add Title>}
 \usage{
-switchInput(inputId, default = FALSE, configuration = NULL)
+switchInput(
+  inputId,
+  label = c(FALSE, TRUE),
+  default = FALSE,
+  configuration = list(),
+  render_input = NULL
+)
 }
 \description{
 <Add Description>
