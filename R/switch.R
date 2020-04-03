@@ -14,7 +14,7 @@ switchInput <- function(inputId,
   configuration[["inputId"]] <- inputId
 
   div(
-    class = "form-group shiny-input-container",
+    class = "form-group shiny-input-container switch-wrapper",
     style = "display: flex",
 
     tags$label(

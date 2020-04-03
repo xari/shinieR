@@ -10,6 +10,7 @@
 
 .switch-label {
   font-weight: normal;
+  margin-bottom: 0;
 }
 
 .switch-label.font-weight-bold {
