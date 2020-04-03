@@ -16,3 +16,11 @@
 .switch-label.font-weight-bold {
   font-weight: bold;
 }
+
+.switch {
+  margin: 0 5px;
+}
+
+.switch-container .shiny-input-container:not(.time) {
+  align-items: center;
+}
