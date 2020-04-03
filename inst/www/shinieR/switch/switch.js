@@ -2227,11 +2227,10 @@ var SwitchInput = function SwitchInput(_ref) {
   return React.createElement(react_toggle__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
     onChange: function onChange(e) {
       setValue(e.target.checked);
-      var labelNode = document.querySelector("[for = \"".concat(configuration.inputId, "\"]"));
-      var label = labelNode.textContent;
-      var altLabel = labelNode.dataset.alt;
-      labelNode.textContent = altLabel;
-      labelNode.dataset.alt = label;
+      var labelNodes = document.querySelectorAll("[for = \"".concat(configuration.inputId, "\"]"));
+      [].forEach.call(labelNodes, function (node) {
+        node.classList.toggle("font-weight-bold");
+      });
     },
     value: value
   }, configuration));

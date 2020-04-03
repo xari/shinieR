@@ -6,12 +6,11 @@ const SwitchInput = ({ configuration = NA, value, setValue }) => {
   return <Toggle onChange={e => {
                             setValue(e.target.checked);
 
-                            const labelNode = document.querySelector(`[for = "${configuration.inputId}"]`);
-                            const label = labelNode.textContent;
-                            const altLabel = labelNode.dataset.alt;
+                            const labelNodes = document.querySelectorAll(`[for = "${configuration.inputId}"]`);
 
-                            labelNode.textContent = altLabel;
-                            labelNode.dataset.alt = label;
+                            [].forEach.call(labelNodes, function(node) {
+                              node.classList.toggle("font-weight-bold");
+                            });
                           }}
                  value={value}
                  { ...configuration } />;

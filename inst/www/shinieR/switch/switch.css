@@ -7,3 +7,11 @@
   padding-left: 0;
   padding-right: 0;
 }
+
+.switch-label {
+  font-weight: normal;
+}
+
+.switch-label.font-weight-bold {
+  font-weight: bold;
+}

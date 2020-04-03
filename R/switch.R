@@ -1,6 +1,6 @@
-#' <Add Title>
+#' <Render a Switch Input>
 #'
-#' <Add Description>
+#' <This input can also render any other Shiny input that is passed to it.>
 #'
 #' @importFrom shiny restoreInput
 #' @importFrom reactR createReactShinyInput
@@ -10,26 +10,18 @@
 switchInput <- function(inputId,
                         label = c(FALSE, TRUE),
                         default = FALSE,
-                        configuration = list(),
-                        render_input = NULL) {
-
-  if (!is.null(render_input)) render_input[["label"]] <- list(NULL)
-
+                        configuration = list()) {
   configuration[["inputId"]] <- inputId
 
   div(
     class = "form-group shiny-input-container",
+    style = "display: flex",
 
     tags$label(
-      class = "control-label",
-      `data-alt` = label[2],
-      label[1],
-      `for` = inputId
+      class = "control-label switch-label font-weight-bold",
+      `for` = inputId,
+      label[1]
     ),
-
-    if (!is.null(render_input))
-      do.call(render_input$input,
-              render_input[-1]),
 
     reactR::createReactShinyInput(
       inputId,
@@ -45,6 +37,12 @@ switchInput <- function(inputId,
       default,
       configuration,
       htmltools::tags$span
+    ),
+
+    tags$label(
+      class = "control-label switch-label",
+      `for` = inputId,
+      label[2]
     )
   )
 }

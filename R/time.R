@@ -1,6 +1,6 @@
-#' <Add Title>
+#' <Render a Time Input>
 #'
-#' <Add Description>
+#' <Based on [react-time-picker](http://projects.wojtekmaj.pl/react-time-picker/).>
 #'
 #' @importFrom shiny restoreInput
 #' @importFrom reactR createReactShinyInput

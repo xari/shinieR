@@ -2,7 +2,7 @@
 % Please edit documentation in R/time.R
 \name{timeInput}
 \alias{timeInput}
-\title{<Add Title>}
+\title{<Render a Time Input>}
 \usage{
 timeInput(
   inputId,
@@ -11,5 +11,5 @@ timeInput(
 )
 }
 \description{
-<Add Description>
+<Based on [react-time-picker](http://projects.wojtekmaj.pl/react-time-picker/).>
 }

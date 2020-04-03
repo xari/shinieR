@@ -2,16 +2,15 @@
 % Please edit documentation in R/switch.R
 \name{switchInput}
 \alias{switchInput}
-\title{<Add Title>}
+\title{<Render a Switch Input>}
 \usage{
 switchInput(
   inputId,
   label = c(FALSE, TRUE),
   default = FALSE,
-  configuration = list(),
-  render_input = NULL
+  configuration = list()
 )
 }
 \description{
-<Add Description>
+<This input can also render any other Shiny input that is passed to it.>
 }
