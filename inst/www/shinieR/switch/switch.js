@@ -1198,7 +1198,7 @@ module.exports = ReactPropTypesSecret;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.13.0
+/** @license React v16.13.1
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -1896,11 +1896,9 @@ options.singleton = false;
 
 var update = api(content, options);
 
-var exported = content.locals ? content.locals : {};
 
 
-
-module.exports = exported;
+module.exports = content.locals || {};
 
 /***/ }),
 
@@ -2224,7 +2222,7 @@ var SwitchInput = function SwitchInput(_ref) {
       configuration = _ref$configuration === void 0 ? NA : _ref$configuration,
       value = _ref.value,
       setValue = _ref.setValue;
-  return React.createElement(react_toggle__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
+  return /*#__PURE__*/React.createElement(react_toggle__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
     onChange: function onChange(e) {
       setValue(e.target.checked);
       var labelNodes = document.querySelectorAll("[for = \"".concat(configuration.inputId, "\"]"));

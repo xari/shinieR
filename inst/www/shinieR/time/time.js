@@ -2082,11 +2082,9 @@ options.singleton = false;
 
 var update = api(content, options);
 
-var exported = content.locals ? content.locals : {};
 
 
-
-module.exports = exported;
+module.exports = content.locals || {};
 
 /***/ }),
 
@@ -3101,7 +3099,7 @@ var Fit = /*#__PURE__*/function (_Component) {
       var child = react__WEBPACK_IMPORTED_MODULE_0___default.a.Children.only(children);
 
       if (isDisplayContentsSupported) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           ref: function ref(container) {
             _this2.container = container;
             var element = container && container.firstChild;
@@ -3183,7 +3181,7 @@ var warnOnDev = function warnOnDev() {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.13.0
+/** @license React v16.13.1
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -5462,11 +5460,9 @@ options.singleton = false;
 
 var update = api(content, options);
 
-var exported = content.locals ? content.locals : {};
 
 
-
-module.exports = exported;
+module.exports = content.locals || {};
 
 /***/ }),
 
@@ -6807,7 +6803,7 @@ var TimeInput = function TimeInput(_ref) {
   var configuration = _ref.configuration,
       value = _ref.value,
       setValue = _ref.setValue;
-  return React.createElement(react_time_picker__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
+  return /*#__PURE__*/React.createElement(react_time_picker__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
     onChange: function onChange(newTime) {
       return setValue(newTime);
     },
