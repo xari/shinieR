@@ -9,6 +9,8 @@ Shinier inputs for Shiny apps
 
 ## Usage
 
+Each input requires an `inputId`, and also accepts optional `value` and `configuration` arguments.
+
 #### `timeInput()`
 
 This input is a binding for [`react-time-picker`](https://github.com/wojtekmaj/react-time-picker#readme).
