@@ -2,7 +2,8 @@
   "private": true,
   "dependencies": {
     "react-time-picker": "^3.9.0",
-    "react-toggle": "^4.1.1"
+    "react-toggle": "^4.1.1",
+    "tailwindcss": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",

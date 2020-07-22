@@ -1,32 +1,51 @@
 library(shiny)
 library(shinieR)
+library(dplyr)
 
 ui <- fluidPage(
-  titlePanel("shinieR Inputs"),
+  theme = "tailwind.min.css",
+  # titlePanel(windowTitle = "shinieR Inputs"),
 
-  h3("timeInput"),
+  h2(class = "text-5xl my-5",
+             "shinieR Inputs"),
 
-  timeInput("timeInput",
-            configuration = list(disableClock = TRUE,
-                                 format = "HH:mm",
-                                 hourPlaceholder = "HH",
-                                 minutePlaceholder = "MM")),
-
-  tags$br(),
-
-  textOutput("timeTextOutput"),
-
-  h3("switchInput"),
-
-  switchInput("switchInput", c("Yes", "No")),
-
-  tags$br(),
-
-  textOutput("switchOutput")
+  div(
+    class = "flex mb-4 space-x-6 space-y-6 items-baseline",
+    div(
+      class = "max-w-sm rounded overflow-hidden shadow-lg bg-indigo-100",
+      div(class = "px-6 py-4",
+	  h2(class = "font-bold text-xl mb-2",
+	     "timeInput"),
+	  timeInput(
+		    "timeInput",
+		    configuration = list(
+					 disableClock = TRUE,
+					 format = "HH:mm",
+					 hourPlaceholder = "HH",
+					 minutePlaceholder = "MM"
+		    )
+	  ),
+      tags$br(),
+      textOutput("timeOutput") %>%
+        tagAppendAttributes(class = "text-gray-700 text-base")
+      )
+    ),
+    div(
+      class = "max-w-sm rounded overflow-hidden shadow-lg bg-indigo-100",
+      div(class = "px-6 py-4",
+	  h2(class = "font-bold text-xl mb-2",
+	     "switchInput"),
+	  switchInput("switchInput", c("Yes", "No")),
+	  tags$br(),
+	  textOutput("switchOutput") %>%
+		  tagAppendAttributes(class = "text-gray-700 text-base")
+      )
+    )
+  )
 )
 
 server <- function(input, output, session) {
-  output$timeTextOutput <- renderText({
+  output$timeOutput <- renderText({
     sprintf("You entered: %s", input$timeInput)
   })
 
