@@ -9,7 +9,7 @@ Shinier inputs for Shiny apps
 
 ## Usage
 
-### `timeInput()`
+#### `timeInput()`
 
 ```r
 timeInput(
@@ -23,7 +23,7 @@ timeInput(
 )
 ```
 
-### `switchInput()`
+#### `switchInput()`
 
 ```r
 switchInput("switchInput",
