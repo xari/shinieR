@@ -1,7 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "react-time-picker": "^3.9.0",
+    "react-time-picker": "^4.0.1",
     "react-toggle": "^4.1.1",
     "tailwindcss": "^1.5.1"
   },
@@ -10,9 +10,12 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
-    "css-loader": "^3.6.0",
+    "css-loader": "^4.3.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "build": "webpack"
   }
 }
