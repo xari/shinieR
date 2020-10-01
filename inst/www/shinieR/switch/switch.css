@@ -23,5 +23,6 @@
 }
 
 .switch-container .shiny-input-container:not(.time) {
+  display: flex;
   align-items: center;
 }

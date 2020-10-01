@@ -15,7 +15,6 @@ switchInput <- function(inputId,
 
   div(
     class = "form-group shiny-input-container switch-wrapper",
-    style = "display: flex; align-items: center",
 
     tags$label(
       class = "control-label switch-label font-weight-bold",
