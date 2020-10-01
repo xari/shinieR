@@ -8,23 +8,34 @@
 #'
 #' @export
 timeInput <- function(inputId,
+		      label,
                       default = format(lubridate::now(), "%H:%M"),
                       configuration = NULL) {
-  reactR::createReactShinyInput(
-    inputId,
-    "time form-control form-group shiny-input-container",
-    htmltools::htmlDependency(
-      name = "time-input",
-      version = "1.0.0",
-      src = "www/shinieR/time",
-      package = "shinieR",
-      script = "time.js",
-      stylesheet = "time.css"
-    ),
-    default,
-    configuration,
-    htmltools::tags$div
-  )
+	div(
+	    class = "form-group shiny-input-container time-wrapper",
+
+	    tags$label(
+		       class = "control-label time-label font-weight-bold",
+		       `for` = inputId,
+		       label
+		       ),
+
+	    reactR::createReactShinyInput(
+					  inputId,
+					  "time form-control form-group shiny-input-container",
+					  htmltools::htmlDependency(
+								    name = "time-input",
+								    version = "1.0.0",
+								    src = "www/shinieR/time",
+								    package = "shinieR",
+								    script = "time.js",
+								    stylesheet = "time.css"
+								    ),
+					  default,
+					  configuration,
+					  htmltools::tags$div
+	    )
+	)
 }
 
 #' <Add Title>

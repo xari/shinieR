@@ -14,10 +14,9 @@ ui <- fluidPage(
     div(
       class = "max-w-sm rounded overflow-hidden shadow-lg bg-indigo-100",
       div(class = "px-6 py-4",
-	  h2(class = "font-bold text-xl mb-2",
-	     "timeInput"),
 	  timeInput(
 		    "timeInput",
+		    "Time",
 		    configuration = list(
 					 disableClock = TRUE,
 					 format = "HH:mm",
@@ -33,8 +32,6 @@ ui <- fluidPage(
     div(
       class = "max-w-sm rounded overflow-hidden shadow-lg bg-indigo-100",
       div(class = "px-6 py-4",
-	  h2(class = "font-bold text-xl mb-2",
-	     "switchInput"),
 	  switchInput("switchInput", c("Yes", "No")),
 	  tags$br(),
 	  textOutput("switchOutput") %>%

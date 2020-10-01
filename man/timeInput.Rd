@@ -6,6 +6,7 @@
 \usage{
 timeInput(
   inputId,
+  label,
   default = format(lubridate::now(), "\%H:\%M"),
   configuration = NULL
 )
