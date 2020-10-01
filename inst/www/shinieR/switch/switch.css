@@ -22,7 +22,7 @@
   margin: 0 5px;
 }
 
-.switch-container .shiny-input-container:not(.time) {
+.shiny-input-container.switch-wrapper {
   display: flex;
   align-items: center;
 }
