@@ -15,7 +15,7 @@ timeInput <- function(inputId,
 	    class = "form-group shiny-input-container time-wrapper",
 
 	    tags$label(
-		       class = "control-label time-label font-weight-bold",
+		       class = "control-label time-label",
 		       `for` = inputId,
 		       label
 		       ),
