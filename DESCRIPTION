@@ -1,6 +1,6 @@
 Package: shinieR
 Title: Shinier inputs for Shiny apps
-Version: 0.0.0.9008
+Version: 0.0.0.9009
 Authors@R: 
     person(given = "Harry",
            family = "Anderson",
