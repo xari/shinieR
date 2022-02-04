@@ -12,6 +12,7 @@ const SwitchInput = ({ configuration = NA, value, setValue }) => {
                               node.classList.toggle("font-weight-bold");
                             });
                           }}
+                 checked={value}
                  value={value}
                  { ...configuration } />;
 };

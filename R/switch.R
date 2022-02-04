@@ -8,41 +8,23 @@
 #'
 #' @export
 switchInput <- function(inputId,
-                        label = c(FALSE, TRUE),
                         default = FALSE,
                         configuration = list()) {
   configuration[["inputId"]] <- inputId
 
-  div(
-    class = "form-group shiny-input-container switch-wrapper",
-
-    tags$label(
-      class = "control-label switch-label font-weight-bold",
-      `for` = inputId,
-      label[1]
-    ),
-
-    reactR::createReactShinyInput(
+  reactR::createReactShinyInput(
       inputId,
-      "switch form-control switch shiny-bound-input",
+      "switch shiny-bound-input ml-3",
       htmltools::htmlDependency(
         name = "switch-input",
         version = "1.0.0",
         src = "www/shinieR/switch",
         package = "shinieR",
         script = "switch.js",
-        stylesheet = "switch.css"
       ),
-      default,
-      configuration,
-      htmltools::tags$span
-    ),
-
-    tags$label(
-      class = "control-label switch-label",
-      `for` = inputId,
-      label[2]
-    )
+      default = default,
+      configuration = configuration,
+      htmltools::tags$div
   )
 }
 

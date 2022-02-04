@@ -1,148 +1,64 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./srcjs/time.jsx");
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@wojtekmaj/date-utils/dist/esm/index.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@wojtekmaj/date-utils/dist/esm/index.js ***!
   \**************************************************************/
-/*! exports provided: getYear, getMonth, getMonthHuman, getDate, getHours, getMinutes, getSeconds, getCenturyStart, getPreviousCenturyStart, getNextCenturyStart, getCenturyEnd, getPreviousCenturyEnd, getNextCenturyEnd, getCenturyRange, getDecadeStart, getPreviousDecadeStart, getNextDecadeStart, getDecadeEnd, getPreviousDecadeEnd, getNextDecadeEnd, getDecadeRange, getYearStart, getPreviousYearStart, getNextYearStart, getYearEnd, getPreviousYearEnd, getNextYearEnd, getYearRange, getMonthStart, getPreviousMonthStart, getNextMonthStart, getMonthEnd, getPreviousMonthEnd, getNextMonthEnd, getMonthRange, getDayStart, getPreviousDayStart, getNextDayStart, getDayEnd, getPreviousDayEnd, getNextDayEnd, getDayRange, getDaysInMonth, getHoursMinutes, getHoursMinutesSeconds, getISOLocalMonth, getISOLocalDate, getISOLocalDateTime */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getYear", function() { return getYear; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMonth", function() { return getMonth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMonthHuman", function() { return getMonthHuman; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDate", function() { return getDate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHours", function() { return getHours; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMinutes", function() { return getMinutes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSeconds", function() { return getSeconds; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCenturyStart", function() { return getCenturyStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousCenturyStart", function() { return getPreviousCenturyStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextCenturyStart", function() { return getNextCenturyStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCenturyEnd", function() { return getCenturyEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousCenturyEnd", function() { return getPreviousCenturyEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextCenturyEnd", function() { return getNextCenturyEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCenturyRange", function() { return getCenturyRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDecadeStart", function() { return getDecadeStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousDecadeStart", function() { return getPreviousDecadeStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextDecadeStart", function() { return getNextDecadeStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDecadeEnd", function() { return getDecadeEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousDecadeEnd", function() { return getPreviousDecadeEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextDecadeEnd", function() { return getNextDecadeEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDecadeRange", function() { return getDecadeRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getYearStart", function() { return getYearStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousYearStart", function() { return getPreviousYearStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextYearStart", function() { return getNextYearStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getYearEnd", function() { return getYearEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousYearEnd", function() { return getPreviousYearEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextYearEnd", function() { return getNextYearEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getYearRange", function() { return getYearRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMonthStart", function() { return getMonthStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousMonthStart", function() { return getPreviousMonthStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextMonthStart", function() { return getNextMonthStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMonthEnd", function() { return getMonthEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousMonthEnd", function() { return getPreviousMonthEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextMonthEnd", function() { return getNextMonthEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMonthRange", function() { return getMonthRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDayStart", function() { return getDayStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousDayStart", function() { return getPreviousDayStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextDayStart", function() { return getNextDayStart; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDayEnd", function() { return getDayEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPreviousDayEnd", function() { return getPreviousDayEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNextDayEnd", function() { return getNextDayEnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDayRange", function() { return getDayRange; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDaysInMonth", function() { return getDaysInMonth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHoursMinutes", function() { return getHoursMinutes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHoursMinutesSeconds", function() { return getHoursMinutesSeconds; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getISOLocalMonth", function() { return getISOLocalMonth; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getISOLocalDate", function() { return getISOLocalDate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getISOLocalDateTime", function() { return getISOLocalDateTime; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getYear": () => (/* binding */ getYear),
+/* harmony export */   "getMonth": () => (/* binding */ getMonth),
+/* harmony export */   "getMonthHuman": () => (/* binding */ getMonthHuman),
+/* harmony export */   "getDate": () => (/* binding */ getDate),
+/* harmony export */   "getHours": () => (/* binding */ getHours),
+/* harmony export */   "getMinutes": () => (/* binding */ getMinutes),
+/* harmony export */   "getSeconds": () => (/* binding */ getSeconds),
+/* harmony export */   "getCenturyStart": () => (/* binding */ getCenturyStart),
+/* harmony export */   "getPreviousCenturyStart": () => (/* binding */ getPreviousCenturyStart),
+/* harmony export */   "getNextCenturyStart": () => (/* binding */ getNextCenturyStart),
+/* harmony export */   "getCenturyEnd": () => (/* binding */ getCenturyEnd),
+/* harmony export */   "getPreviousCenturyEnd": () => (/* binding */ getPreviousCenturyEnd),
+/* harmony export */   "getNextCenturyEnd": () => (/* binding */ getNextCenturyEnd),
+/* harmony export */   "getCenturyRange": () => (/* binding */ getCenturyRange),
+/* harmony export */   "getDecadeStart": () => (/* binding */ getDecadeStart),
+/* harmony export */   "getPreviousDecadeStart": () => (/* binding */ getPreviousDecadeStart),
+/* harmony export */   "getNextDecadeStart": () => (/* binding */ getNextDecadeStart),
+/* harmony export */   "getDecadeEnd": () => (/* binding */ getDecadeEnd),
+/* harmony export */   "getPreviousDecadeEnd": () => (/* binding */ getPreviousDecadeEnd),
+/* harmony export */   "getNextDecadeEnd": () => (/* binding */ getNextDecadeEnd),
+/* harmony export */   "getDecadeRange": () => (/* binding */ getDecadeRange),
+/* harmony export */   "getYearStart": () => (/* binding */ getYearStart),
+/* harmony export */   "getPreviousYearStart": () => (/* binding */ getPreviousYearStart),
+/* harmony export */   "getNextYearStart": () => (/* binding */ getNextYearStart),
+/* harmony export */   "getYearEnd": () => (/* binding */ getYearEnd),
+/* harmony export */   "getPreviousYearEnd": () => (/* binding */ getPreviousYearEnd),
+/* harmony export */   "getNextYearEnd": () => (/* binding */ getNextYearEnd),
+/* harmony export */   "getYearRange": () => (/* binding */ getYearRange),
+/* harmony export */   "getMonthStart": () => (/* binding */ getMonthStart),
+/* harmony export */   "getPreviousMonthStart": () => (/* binding */ getPreviousMonthStart),
+/* harmony export */   "getNextMonthStart": () => (/* binding */ getNextMonthStart),
+/* harmony export */   "getMonthEnd": () => (/* binding */ getMonthEnd),
+/* harmony export */   "getPreviousMonthEnd": () => (/* binding */ getPreviousMonthEnd),
+/* harmony export */   "getNextMonthEnd": () => (/* binding */ getNextMonthEnd),
+/* harmony export */   "getMonthRange": () => (/* binding */ getMonthRange),
+/* harmony export */   "getDayStart": () => (/* binding */ getDayStart),
+/* harmony export */   "getPreviousDayStart": () => (/* binding */ getPreviousDayStart),
+/* harmony export */   "getNextDayStart": () => (/* binding */ getNextDayStart),
+/* harmony export */   "getDayEnd": () => (/* binding */ getDayEnd),
+/* harmony export */   "getPreviousDayEnd": () => (/* binding */ getPreviousDayEnd),
+/* harmony export */   "getNextDayEnd": () => (/* binding */ getNextDayEnd),
+/* harmony export */   "getDayRange": () => (/* binding */ getDayRange),
+/* harmony export */   "getDaysInMonth": () => (/* binding */ getDaysInMonth),
+/* harmony export */   "getHoursMinutes": () => (/* binding */ getHoursMinutes),
+/* harmony export */   "getHoursMinutesSeconds": () => (/* binding */ getHoursMinutesSeconds),
+/* harmony export */   "getISOLocalMonth": () => (/* binding */ getISOLocalMonth),
+/* harmony export */   "getISOLocalDate": () => (/* binding */ getISOLocalDate),
+/* harmony export */   "getISOLocalDateTime": () => (/* binding */ getISOLocalDateTime)
+/* harmony export */ });
 /**
  * Utils
  */
@@ -500,56 +416,11 @@ function getISOLocalDateTime(date) {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-clock/dist/Clock.css":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/react-clock/dist/Clock.css ***!
-  \***************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".react-clock {\n  display: block;\n  position: relative;\n}\n.react-clock,\n.react-clock *,\n.react-clock *:before,\n.react-clock *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-clock__face {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  border: 1px solid black;\n  border-radius: 50%;\n}\n.react-clock__hand {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__hand__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__mark__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark__number {\n  position: absolute;\n  left: -40px;\n  width: 80px;\n  text-align: center;\n}\n.react-clock__second-hand__body {\n  background-color: red;\n}\n", "",{"version":3,"sources":["webpack://node_modules/react-clock/dist/Clock.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,kBAAkB;AACpB;AACA;;;;EAIE,2BAA2B;EAC3B,8BAA8B;EAC9B,sBAAsB;AACxB;AACA;EACE,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,uBAAuB;EACvB,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,SAAS;EACT,UAAU;AACZ;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,2BAA2B;AAC7B;AACA;EACE,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,SAAS;EACT,UAAU;AACZ;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,2BAA2B;AAC7B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,qBAAqB;AACvB","sourcesContent":[".react-clock {\n  display: block;\n  position: relative;\n}\n.react-clock,\n.react-clock *,\n.react-clock *:before,\n.react-clock *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-clock__face {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  border: 1px solid black;\n  border-radius: 50%;\n}\n.react-clock__hand {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__hand__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__mark__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark__number {\n  position: absolute;\n  left: -40px;\n  width: 80px;\n  text-align: center;\n}\n.react-clock__second-hand__body {\n  background-color: red;\n}\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-time-picker/dist/TimePicker.css":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/react-time-picker/dist/TimePicker.css ***!
-  \**************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
-// Module
-___CSS_LOADER_EXPORT___.push([module.i, ".react-time-picker {\n  display: inline-flex;\n  position: relative;\n}\n.react-time-picker,\n.react-time-picker *,\n.react-time-picker *:before,\n.react-time-picker *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-time-picker--disabled {\n  background-color: #f0f0f0;\n  color: #6d6d6d;\n}\n.react-time-picker__wrapper {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  border: thin solid gray;\n}\n.react-time-picker__inputGroup {\n  min-width: calc((4px * 3) +  0.54em * 6  +  0.217em * 2);\n  flex-grow: 1;\n  padding: 0 2px;\n  box-sizing: content-box;\n}\n.react-time-picker__inputGroup__divider {\n  padding: 1px 0;\n  white-space: pre;\n}\n.react-time-picker__inputGroup__input {\n  min-width: 0.54em;\n  height: 100%;\n  position: relative;\n  padding: 0 1px;\n  border: 0;\n  background: none;\n  font: inherit;\n  box-sizing: content-box;\n  -moz-appearance: textfield;\n}\n.react-time-picker__inputGroup__input::-webkit-outer-spin-button,\n.react-time-picker__inputGroup__input::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.react-time-picker__inputGroup__input:invalid {\n  background: rgba(255, 0, 0, 0.1);\n}\n.react-time-picker__inputGroup__input--hasLeadingZero {\n  margin-left: -0.54em;\n  padding-left: calc(1px +  0.54em);\n}\n.react-time-picker__inputGroup__amPm {\n  font: inherit;\n  -moz-appearance: menulist;\n}\n.react-time-picker__button {\n  border: 0;\n  background: transparent;\n  padding: 4px 6px;\n}\n.react-time-picker__button:enabled {\n  cursor: pointer;\n}\n.react-time-picker__button:enabled:hover .react-time-picker__button__icon,\n.react-time-picker__button:enabled:focus .react-time-picker__button__icon {\n  stroke: #0078d7;\n}\n.react-time-picker__button:disabled .react-time-picker__button__icon {\n  stroke: #6d6d6d;\n}\n.react-time-picker__button svg {\n  display: inherit;\n}\n.react-time-picker__clock {\n  width: 200px;\n  height: 200px;\n  max-width: 100vw;\n  padding: 25px;\n  background-color: white;\n  border: thin solid #a0a096;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1;\n}\n.react-time-picker__clock--closed {\n  display: none;\n}\n", "",{"version":3,"sources":["webpack://node_modules/react-time-picker/dist/TimePicker.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,kBAAkB;AACpB;AACA;;;;EAIE,2BAA2B;EAC3B,8BAA8B;EAC9B,sBAAsB;AACxB;AACA;EACE,yBAAyB;EACzB,cAAc;AAChB;AACA;EACE,aAAa;EACb,YAAY;EACZ,cAAc;EACd,uBAAuB;AACzB;AACA;EACE,wDAAwD;EACxD,YAAY;EACZ,cAAc;EACd,uBAAuB;AACzB;AACA;EACE,cAAc;EACd,gBAAgB;AAClB;AACA;EACE,iBAAiB;EACjB,YAAY;EACZ,kBAAkB;EAClB,cAAc;EACd,SAAS;EACT,gBAAgB;EAChB,aAAa;EACb,uBAAuB;EACvB,0BAA0B;AAC5B;AACA;;EAEE,wBAAwB;EACxB,SAAS;AACX;AACA;EACE,gCAAgC;AAClC;AACA;EACE,oBAAoB;EACpB,iCAAiC;AACnC;AACA;EACE,aAAa;EACb,yBAAyB;AAC3B;AACA;EACE,SAAS;EACT,uBAAuB;EACvB,gBAAgB;AAClB;AACA;EACE,eAAe;AACjB;AACA;;EAEE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,aAAa;EACb,gBAAgB;EAChB,aAAa;EACb,uBAAuB;EACvB,0BAA0B;EAC1B,kBAAkB;EAClB,SAAS;EACT,OAAO;EACP,UAAU;AACZ;AACA;EACE,aAAa;AACf","sourcesContent":[".react-time-picker {\n  display: inline-flex;\n  position: relative;\n}\n.react-time-picker,\n.react-time-picker *,\n.react-time-picker *:before,\n.react-time-picker *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-time-picker--disabled {\n  background-color: #f0f0f0;\n  color: #6d6d6d;\n}\n.react-time-picker__wrapper {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  border: thin solid gray;\n}\n.react-time-picker__inputGroup {\n  min-width: calc((4px * 3) +  0.54em * 6  +  0.217em * 2);\n  flex-grow: 1;\n  padding: 0 2px;\n  box-sizing: content-box;\n}\n.react-time-picker__inputGroup__divider {\n  padding: 1px 0;\n  white-space: pre;\n}\n.react-time-picker__inputGroup__input {\n  min-width: 0.54em;\n  height: 100%;\n  position: relative;\n  padding: 0 1px;\n  border: 0;\n  background: none;\n  font: inherit;\n  box-sizing: content-box;\n  -moz-appearance: textfield;\n}\n.react-time-picker__inputGroup__input::-webkit-outer-spin-button,\n.react-time-picker__inputGroup__input::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.react-time-picker__inputGroup__input:invalid {\n  background: rgba(255, 0, 0, 0.1);\n}\n.react-time-picker__inputGroup__input--hasLeadingZero {\n  margin-left: -0.54em;\n  padding-left: calc(1px +  0.54em);\n}\n.react-time-picker__inputGroup__amPm {\n  font: inherit;\n  -moz-appearance: menulist;\n}\n.react-time-picker__button {\n  border: 0;\n  background: transparent;\n  padding: 4px 6px;\n}\n.react-time-picker__button:enabled {\n  cursor: pointer;\n}\n.react-time-picker__button:enabled:hover .react-time-picker__button__icon,\n.react-time-picker__button:enabled:focus .react-time-picker__button__icon {\n  stroke: #0078d7;\n}\n.react-time-picker__button:disabled .react-time-picker__button__icon {\n  stroke: #6d6d6d;\n}\n.react-time-picker__button svg {\n  display: inherit;\n}\n.react-time-picker__clock {\n  width: 200px;\n  height: 200px;\n  max-width: 100vw;\n  padding: 25px;\n  background-color: white;\n  border: thin solid #a0a096;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1;\n}\n.react-time-picker__clock--closed {\n  display: none;\n}\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -557,38 +428,56 @@ ___CSS_LOADER_EXPORT___.push([module.i, ".react-time-picker {\n  display: inline
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
 */
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
 
-module.exports = function (useSourceMap) {
+module.exports = function (cssWithMappingToString) {
   var list = []; // return the list of modules as css string
 
   list.toString = function toString() {
     return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
+      var content = "";
+      var needLayer = typeof item[5] !== "undefined";
+
+      if (item[4]) {
+        content += "@supports (".concat(item[4], ") {");
+      }
 
       if (item[2]) {
-        return "@media ".concat(item[2], " {").concat(content, "}");
+        content += "@media ".concat(item[2], " {");
+      }
+
+      if (needLayer) {
+        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
+      }
+
+      content += cssWithMappingToString(item);
+
+      if (needLayer) {
+        content += "}";
+      }
+
+      if (item[2]) {
+        content += "}";
+      }
+
+      if (item[4]) {
+        content += "}";
       }
 
       return content;
-    }).join('');
+    }).join("");
   }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
 
 
-  list.i = function (modules, mediaQuery, dedupe) {
-    if (typeof modules === 'string') {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, '']];
+  list.i = function i(modules, media, dedupe, supports, layer) {
+    if (typeof modules === "string") {
+      modules = [[null, modules, undefined]];
     }
 
     var alreadyImportedModules = {};
 
     if (dedupe) {
-      for (var i = 0; i < this.length; i++) {
-        // eslint-disable-next-line prefer-destructuring
-        var id = this[i][0];
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
 
         if (id != null) {
           alreadyImportedModules[id] = true;
@@ -596,19 +485,37 @@ module.exports = function (useSourceMap) {
       }
     }
 
-    for (var _i = 0; _i < modules.length; _i++) {
-      var item = [].concat(modules[_i]);
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
 
       if (dedupe && alreadyImportedModules[item[0]]) {
-        // eslint-disable-next-line no-continue
         continue;
       }
 
-      if (mediaQuery) {
-        if (!item[2]) {
-          item[2] = mediaQuery;
+      if (typeof layer !== "undefined") {
+        if (typeof item[5] === "undefined") {
+          item[5] = layer;
         } else {
-          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
+          item[5] = layer;
+        }
+      }
+
+      if (media) {
+        if (!item[2]) {
+          item[2] = media;
+        } else {
+          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
+          item[2] = media;
+        }
+      }
+
+      if (supports) {
+        if (!item[4]) {
+          item[4] = "".concat(supports);
+        } else {
+          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
+          item[4] = supports;
         }
       }
 
@@ -619,33 +526,37 @@ module.exports = function (useSourceMap) {
   return list;
 };
 
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
+/***/ }),
 
+/***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
+  \************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = function (item) {
+  var content = item[1];
   var cssMapping = item[3];
 
   if (!cssMapping) {
     return content;
   }
 
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
+  if (typeof btoa === "function") {
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
     var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot || '').concat(source, " */");
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot || "").concat(source, " */");
     });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+    return [content].concat(sourceURLs).concat([sourceMapping]).join("\n");
   }
 
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-  return "/*# ".concat(data, " */");
-}
+  return [content].join("\n");
+};
 
 /***/ }),
 
@@ -653,11 +564,13 @@ function toComment(sourceMap) {
 /*!****************************************************************!*\
   !*** ./node_modules/detect-element-overflow/dist/esm/index.js ***!
   \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 var getRect = function getRect(element) {
   return element.getBoundingClientRect();
 };
@@ -699,7 +612,7 @@ var detectElementOverflow = function detectElementOverflow(element, container) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (detectElementOverflow);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (detectElementOverflow);
 
 /***/ }),
 
@@ -707,13 +620,15 @@ var detectElementOverflow = function detectElementOverflow(element, container) {
 /*!********************************************************!*\
   !*** ./node_modules/get-user-locale/dist/esm/index.js ***!
   \********************************************************/
-/*! exports provided: getUserLocales, getUserLocale, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserLocales", function() { return getUserLocales; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getUserLocale", function() { return getUserLocale; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getUserLocales": () => (/* binding */ getUserLocales),
+/* harmony export */   "getUserLocale": () => (/* binding */ getUserLocale),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var lodash_once__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash.once */ "./node_modules/lodash.once/index.js");
 /* harmony import */ var lodash_once__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_once__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -772,7 +687,7 @@ function getUserLocaleInternal() {
 }
 
 var getUserLocale = lodash_once__WEBPACK_IMPORTED_MODULE_0___default()(getUserLocaleInternal);
-/* harmony default export */ __webpack_exports__["default"] = (getUserLocale);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getUserLocale);
 
 /***/ }),
 
@@ -780,10 +695,9 @@ var getUserLocale = lodash_once__WEBPACK_IMPORTED_MODULE_0___default()(getUserLo
 /*!*******************************************!*\
   !*** ./node_modules/lodash.once/index.js ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ ((module) => {
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 /**
  * lodash (Custom Build) <https://lodash.com/>
@@ -1097,31 +1011,54 @@ module.exports = once;
 
 /***/ }),
 
-/***/ "./node_modules/make-event-props/dist/entry.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/make-event-props/dist/entry.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/make-event-props/dist/esm/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/make-event-props/dist/esm/index.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = exports.focusEvents = exports.keyboardEvents = exports.touchEvents = exports.mouseEvents = void 0; // As defined on the list of supported mouse events: https://reactjs.org/docs/events.html#mouse-events
-
-var mouseEvents = ['onClick', 'onContextMenu', 'onDoubleClick', 'onDrag', 'onDragEnd', 'onDragEnter', 'onDragExit', 'onDragLeave', 'onDragOver', 'onDragStart', 'onDrop', 'onMouseDown', 'onMouseEnter', 'onMouseLeave', 'onMouseMove', 'onMouseOut', 'onMouseOver', 'onMouseUp']; // As defined on the list of supported touch events: https://reactjs.org/docs/events.html#touch-events
-
-exports.mouseEvents = mouseEvents;
-var touchEvents = ['onTouchCancel', 'onTouchEnd', 'onTouchMove', 'onTouchStart']; // As defined on the list of supported keyboard events: https://reactjs.org/docs/events.html#keyboard-events
-
-exports.touchEvents = touchEvents;
-var keyboardEvents = ['onKeyDown', 'onKeyPress', 'onKeyUp']; // As defined on the list of supported keyboard events: https://reactjs.org/docs/events.html#focus-events
-
-exports.keyboardEvents = keyboardEvents;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clipboardEvents": () => (/* binding */ clipboardEvents),
+/* harmony export */   "compositionEvents": () => (/* binding */ compositionEvents),
+/* harmony export */   "keyboardEvents": () => (/* binding */ keyboardEvents),
+/* harmony export */   "focusEvents": () => (/* binding */ focusEvents),
+/* harmony export */   "formEvents": () => (/* binding */ formEvents),
+/* harmony export */   "genericEvents": () => (/* binding */ genericEvents),
+/* harmony export */   "mouseEvents": () => (/* binding */ mouseEvents),
+/* harmony export */   "pointerEvents": () => (/* binding */ pointerEvents),
+/* harmony export */   "selectionEvents": () => (/* binding */ selectionEvents),
+/* harmony export */   "touchEvents": () => (/* binding */ touchEvents),
+/* harmony export */   "uiEvents": () => (/* binding */ uiEvents),
+/* harmony export */   "wheelEvents": () => (/* binding */ wheelEvents),
+/* harmony export */   "mediaEvents": () => (/* binding */ mediaEvents),
+/* harmony export */   "imageEvents": () => (/* binding */ imageEvents),
+/* harmony export */   "animationEvents": () => (/* binding */ animationEvents),
+/* harmony export */   "transitionEvents": () => (/* binding */ transitionEvents),
+/* harmony export */   "otherEvents": () => (/* binding */ otherEvents),
+/* harmony export */   "allEvents": () => (/* binding */ allEvents),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// As defined on the list of supported events: https://reactjs.org/docs/events.html
+var clipboardEvents = ['onCopy', 'onCut', 'onPaste'];
+var compositionEvents = ['onCompositionEnd', 'onCompositionStart', 'onCompositionUpdate'];
+var keyboardEvents = ['onKeyDown', 'onKeyPress', 'onKeyUp'];
 var focusEvents = ['onFocus', 'onBlur'];
+var formEvents = ['onChange', 'onInput', 'onInvalid', 'onReset', 'onSubmit'];
+var genericEvents = ['onError', 'onLoad'];
+var mouseEvents = ['onClick', 'onContextMenu', 'onDoubleClick', 'onDrag', 'onDragEnd', 'onDragEnter', 'onDragExit', 'onDragLeave', 'onDragOver', 'onDragStart', 'onDrop', 'onMouseDown', 'onMouseEnter', 'onMouseLeave', 'onMouseMove', 'onMouseOut', 'onMouseOver', 'onMouseUp'];
+var pointerEvents = ['onPointerDown', 'onPointerMove', 'onPointerUp', 'onPointerCancel', 'onGotPointerCapture', 'onLostPointerCapture', 'onPointerEnter', 'onPointerLeave', 'onPointerOver', 'onPointerOut'];
+var selectionEvents = ['onSelect'];
+var touchEvents = ['onTouchCancel', 'onTouchEnd', 'onTouchMove', 'onTouchStart'];
+var uiEvents = ['onScroll'];
+var wheelEvents = ['onWheel'];
+var mediaEvents = ['onAbort', 'onCanPlay', 'onCanPlayThrough', 'onDurationChange', 'onEmptied', 'onEncrypted', 'onEnded', 'onError', 'onLoadedData', 'onLoadedMetadata', 'onLoadStart', 'onPause', 'onPlay', 'onPlaying', 'onProgress', 'onRateChange', 'onSeeked', 'onSeeking', 'onStalled', 'onSuspend', 'onTimeUpdate', 'onVolumeChange', 'onWaiting'];
+var imageEvents = ['onLoad', 'onError'];
+var animationEvents = ['onAnimationStart', 'onAnimationEnd', 'onAnimationIteration'];
+var transitionEvents = ['onTransitionEnd'];
+var otherEvents = ['onToggle'];
+var allEvents = [].concat(clipboardEvents, compositionEvents, keyboardEvents, focusEvents, formEvents, genericEvents, mouseEvents, pointerEvents, selectionEvents, touchEvents, uiEvents, wheelEvents, mediaEvents, imageEvents, animationEvents, transitionEvents, otherEvents);
 /**
  * Returns an object with on-event callback props curried with provided args.
  * @param {Object} props Props passed to a component.
@@ -1129,22 +1066,26 @@ var focusEvents = ['onFocus', 'onBlur'];
  *   shall be curried with.
  */
 
-exports.focusEvents = focusEvents;
-
 var makeEventProps = function makeEventProps(props, getArgs) {
   var eventProps = {};
-  [].concat(mouseEvents, touchEvents, keyboardEvents, focusEvents).forEach(function (eventName) {
-    if (props[eventName]) {
-      eventProps[eventName] = function (event) {
-        return getArgs ? props[eventName](event, getArgs(eventName)) : props[eventName](event);
-      };
+  allEvents.forEach(function (eventName) {
+    if (!(eventName in props)) {
+      return;
     }
+
+    if (!getArgs) {
+      eventProps[eventName] = props[eventName];
+      return;
+    }
+
+    eventProps[eventName] = function (event) {
+      return props[eventName](event, getArgs(eventName));
+    };
   });
   return eventProps;
 };
 
-var _default = makeEventProps;
-exports["default"] = _default;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (makeEventProps);
 
 /***/ }),
 
@@ -1152,20 +1093,67 @@ exports["default"] = _default;
 /*!**********************************************************!*\
   !*** ./node_modules/merge-class-names/dist/esm/index.js ***!
   \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mergeClassNames; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ mergeClassNames)
+/* harmony export */ });
 function mergeClassNames() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
+  return Array.prototype.slice.call(arguments).reduce(function (classList, arg) {
+    return classList.concat(arg);
+  }, []).filter(function (arg) {
+    return typeof arg === 'string';
+  }).join(' ');
+}
+
+/***/ }),
+
+/***/ "./node_modules/merge-refs/dist/esm/index.js":
+/*!***************************************************!*\
+  !*** ./node_modules/merge-refs/dist/esm/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ mergeRefs)
+/* harmony export */ });
+/**
+ * A function that merges React refs into one.
+ * Supports both functions and ref objects created using createRef() and useRef().
+ *
+ * Usage:
+ * ```jsx
+ * <div ref={mergeRefs(ref1, ref2, ref3)} />
+ * ```
+ *
+ * @param {...Array<Function|object>} inputRefs Array of refs
+ * @returns {Function} Merged refs
+ */
+function mergeRefs() {
+  for (var _len = arguments.length, inputRefs = new Array(_len), _key = 0; _key < _len; _key++) {
+    inputRefs[_key] = arguments[_key];
   }
 
-  return args.reduce(function (classList, arg) {
-    return typeof arg === 'string' || arg instanceof Array ? classList.concat(arg) : classList;
-  }, []).filter(Boolean).join(' ');
+  var filteredInputRefs = inputRefs.filter(Boolean);
+
+  if (filteredInputRefs.length <= 1) {
+    return filteredInputRefs[0];
+  }
+
+  return function mergedRefs(ref) {
+    filteredInputRefs.forEach(function (inputRef) {
+      if (typeof inputRef === 'function') {
+        inputRef(ref);
+      } else {
+        // eslint-disable-next-line no-param-reassign
+        inputRef.current = ref;
+      }
+    });
+  };
 }
 
 /***/ }),
@@ -1174,8 +1162,7 @@ function mergeClassNames() {
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 /*
@@ -1280,8 +1267,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /*!***************************************************!*\
   !*** ./node_modules/prop-types/checkPropTypes.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 /**
@@ -1292,7 +1278,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
  */
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 var printWarning = function printWarning() {};
 
@@ -1300,7 +1286,8 @@ if (true) {
   var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
   var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+
+  var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 
   printWarning = function printWarning(text) {
     var message = 'Warning: ' + text;
@@ -1314,7 +1301,9 @@ if (true) {
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
-    } catch (x) {}
+    } catch (x) {
+      /**/
+    }
   };
 }
 /**
@@ -1342,7 +1331,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
           // This is intentionally an invariant that gets caught. It's the same
           // behavior as without this statement except with a better message.
           if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + _typeof(typeSpecs[typeSpecName]) + '`.');
+            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + _typeof(typeSpecs[typeSpecName]) + '`.' + 'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.');
             err.name = 'Invariant Violation';
             throw err;
           }
@@ -1388,8 +1377,7 @@ module.exports = checkPropTypes;
 /*!************************************************************!*\
   !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
   \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 /**
@@ -1400,7 +1388,7 @@ module.exports = checkPropTypes;
  */
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
 
@@ -1408,9 +1396,9 @@ var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-ass
 
 var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
-var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
+var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 
-var has = Function.call.bind(Object.prototype.hasOwnProperty);
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
 
 var printWarning = function printWarning() {};
 
@@ -1515,6 +1503,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 
   var ReactPropTypes = {
     array: createPrimitiveTypeChecker('array'),
+    bigint: createPrimitiveTypeChecker('bigint'),
     bool: createPrimitiveTypeChecker('boolean'),
     func: createPrimitiveTypeChecker('function'),
     number: createPrimitiveTypeChecker('number'),
@@ -1562,8 +1551,9 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
    */
 
 
-  function PropTypeError(message) {
+  function PropTypeError(message, data) {
     this.message = message;
+    this.data = data && _typeof(data) === 'object' ? data : {};
     this.stack = '';
   } // Make `instanceof Error` still work for returned errors.
 
@@ -1629,7 +1619,9 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
         // check, but we can offer a more precise error message here rather than
         // 'of type `object`'.
         var preciseType = getPreciseType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'), {
+          expectedType: expectedType
+        });
       }
 
       return null;
@@ -1781,7 +1773,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 
   function createUnionTypeChecker(arrayOfTypeCheckers) {
     if (!Array.isArray(arrayOfTypeCheckers)) {
-       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : undefined;
+       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : 0;
       return emptyFunctionThatReturnsNull;
     }
 
@@ -1795,15 +1787,23 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
     }
 
     function validate(props, propName, componentName, location, propFullName) {
+      var expectedTypes = [];
+
       for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
         var checker = arrayOfTypeCheckers[i];
+        var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
 
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        if (checkerResult == null) {
           return null;
+        }
+
+        if (checkerResult.data && has(checkerResult.data, 'expectedType')) {
+          expectedTypes.push(checkerResult.data.expectedType);
         }
       }
 
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+      var expectedTypesMessage = expectedTypes.length > 0 ? ', expected one of type [' + expectedTypes.join(', ') + ']' : '';
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`' + expectedTypesMessage + '.'));
     }
 
     return createChainableTypeChecker(validate);
@@ -1821,6 +1821,10 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
     return createChainableTypeChecker(validate);
   }
 
+  function invalidValidatorError(componentName, location, propFullName, key, type) {
+    return new PropTypeError((componentName || 'React class') + ': ' + location + ' type `' + propFullName + '.' + key + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + type + '`.');
+  }
+
   function createShapeTypeChecker(shapeTypes) {
     function validate(props, propName, componentName, location, propFullName) {
       var propValue = props[propName];
@@ -1833,8 +1837,8 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
       for (var key in shapeTypes) {
         var checker = shapeTypes[key];
 
-        if (!checker) {
-          continue;
+        if (typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
         }
 
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
@@ -1857,14 +1861,17 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 
       if (propType !== 'object') {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      } // We need to check all keys in case some are required but missing from
-      // props.
+      } // We need to check all keys in case some are required but missing from props.
 
 
       var allKeys = assign({}, props[propName], shapeTypes);
 
       for (var key in allKeys) {
         var checker = shapeTypes[key];
+
+        if (has(shapeTypes, key) && typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+        }
 
         if (!checker) {
           return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' + '\nBad object: ' + JSON.stringify(props[propName], null, '  ') + '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  '));
@@ -2044,8 +2051,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 /*!******************************************!*\
   !*** ./node_modules/prop-types/index.js ***!
   \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -2068,8 +2074,7 @@ if (true) {
 /*!*************************************************************!*\
   !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 /**
@@ -2085,91 +2090,79 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
-/***/ "./node_modules/react-clock/dist/Clock.css":
-/*!*************************************************!*\
-  !*** ./node_modules/react-clock/dist/Clock.css ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/prop-types/lib/has.js":
+/*!********************************************!*\
+  !*** ./node_modules/prop-types/lib/has.js ***!
+  \********************************************/
+/***/ ((module) => {
 
-var api = __webpack_require__(/*! ../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../css-loader/dist/cjs.js!./Clock.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-clock/dist/Clock.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-
-
-module.exports = content.locals || {};
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 /***/ }),
 
-/***/ "./node_modules/react-clock/dist/Clock.js":
-/*!************************************************!*\
-  !*** ./node_modules/react-clock/dist/Clock.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/react-clock/dist/esm/Clock.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-clock/dist/esm/Clock.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Clock)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var merge_class_names__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! merge-class-names */ "./node_modules/merge-class-names/dist/esm/index.js");
+/* harmony import */ var _wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wojtekmaj/date-utils */ "./node_modules/@wojtekmaj/date-utils/dist/esm/index.js");
+/* harmony import */ var _Hand__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Hand */ "./node_modules/react-clock/dist/esm/Hand.js");
+/* harmony import */ var _Mark__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Mark */ "./node_modules/react-clock/dist/esm/Mark.js");
+/* harmony import */ var _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/propTypes */ "./node_modules/react-clock/dist/esm/shared/propTypes.js");
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = Clock;
 
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
-var _mergeClassNames = _interopRequireDefault(__webpack_require__(/*! merge-class-names */ "./node_modules/merge-class-names/dist/esm/index.js"));
 
-var _Hand = _interopRequireDefault(__webpack_require__(/*! ./Hand */ "./node_modules/react-clock/dist/Hand.js"));
-
-var _Mark = _interopRequireDefault(__webpack_require__(/*! ./Mark */ "./node_modules/react-clock/dist/Mark.js"));
-
-var _dates = __webpack_require__(/*! ./shared/dates */ "./node_modules/react-clock/dist/shared/dates.js");
-
-var _propTypes2 = __webpack_require__(/*! ./shared/propTypes */ "./node_modules/react-clock/dist/shared/propTypes.js");
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
 
 function Clock(_ref) {
   var className = _ref.className,
-      hourHandLength = _ref.hourHandLength,
+      _ref$hourHandLength = _ref.hourHandLength,
+      hourHandLength = _ref$hourHandLength === void 0 ? 50 : _ref$hourHandLength,
       hourHandOppositeLength = _ref.hourHandOppositeLength,
-      hourHandWidth = _ref.hourHandWidth,
-      hourMarksLength = _ref.hourMarksLength,
-      hourMarksWidth = _ref.hourMarksWidth,
-      minuteHandLength = _ref.minuteHandLength,
+      _ref$hourHandWidth = _ref.hourHandWidth,
+      hourHandWidth = _ref$hourHandWidth === void 0 ? 4 : _ref$hourHandWidth,
+      _ref$hourMarksLength = _ref.hourMarksLength,
+      hourMarksLength = _ref$hourMarksLength === void 0 ? 10 : _ref$hourMarksLength,
+      _ref$hourMarksWidth = _ref.hourMarksWidth,
+      hourMarksWidth = _ref$hourMarksWidth === void 0 ? 3 : _ref$hourMarksWidth,
+      _ref$minuteHandLength = _ref.minuteHandLength,
+      minuteHandLength = _ref$minuteHandLength === void 0 ? 70 : _ref$minuteHandLength,
       minuteHandOppositeLength = _ref.minuteHandOppositeLength,
-      minuteHandWidth = _ref.minuteHandWidth,
-      minuteMarksLength = _ref.minuteMarksLength,
-      minuteMarksWidth = _ref.minuteMarksWidth,
-      renderHourMarks = _ref.renderHourMarks,
-      renderMinuteHand = _ref.renderMinuteHand,
-      renderMinuteMarks = _ref.renderMinuteMarks,
+      _ref$minuteHandWidth = _ref.minuteHandWidth,
+      minuteHandWidth = _ref$minuteHandWidth === void 0 ? 2 : _ref$minuteHandWidth,
+      _ref$minuteMarksLengt = _ref.minuteMarksLength,
+      minuteMarksLength = _ref$minuteMarksLengt === void 0 ? 6 : _ref$minuteMarksLengt,
+      _ref$minuteMarksWidth = _ref.minuteMarksWidth,
+      minuteMarksWidth = _ref$minuteMarksWidth === void 0 ? 1 : _ref$minuteMarksWidth,
+      _ref$renderHourMarks = _ref.renderHourMarks,
+      renderHourMarks = _ref$renderHourMarks === void 0 ? true : _ref$renderHourMarks,
+      _ref$renderMinuteHand = _ref.renderMinuteHand,
+      renderMinuteHand = _ref$renderMinuteHand === void 0 ? true : _ref$renderMinuteHand,
+      _ref$renderMinuteMark = _ref.renderMinuteMarks,
+      renderMinuteMarks = _ref$renderMinuteMark === void 0 ? true : _ref$renderMinuteMark,
       renderNumbers = _ref.renderNumbers,
-      renderSecondHand = _ref.renderSecondHand,
-      secondHandLength = _ref.secondHandLength,
+      _ref$renderSecondHand = _ref.renderSecondHand,
+      renderSecondHand = _ref$renderSecondHand === void 0 ? true : _ref$renderSecondHand,
+      _ref$secondHandLength = _ref.secondHandLength,
+      secondHandLength = _ref$secondHandLength === void 0 ? 90 : _ref$secondHandLength,
       secondHandOppositeLength = _ref.secondHandOppositeLength,
-      secondHandWidth = _ref.secondHandWidth,
-      size = _ref.size,
+      _ref$secondHandWidth = _ref.secondHandWidth,
+      secondHandWidth = _ref$secondHandWidth === void 0 ? 1 : _ref$secondHandWidth,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? 150 : _ref$size,
       value = _ref.value;
 
   function renderMinuteMarksFn() {
@@ -2183,7 +2176,7 @@ function Clock(_ref) {
       var isHourMark = renderHourMarks && !(i % 5);
 
       if (!isHourMark) {
-        minuteMarks.push(_react["default"].createElement(_Mark["default"], {
+        minuteMarks.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Mark__WEBPACK_IMPORTED_MODULE_1__["default"], {
           key: "minute_".concat(i),
           angle: i * 6,
           length: minuteMarksLength,
@@ -2204,7 +2197,7 @@ function Clock(_ref) {
     var hourMarks = [];
 
     for (var i = 1; i <= 12; i += 1) {
-      hourMarks.push(_react["default"].createElement(_Mark["default"], {
+      hourMarks.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Mark__WEBPACK_IMPORTED_MODULE_1__["default"], {
         key: "hour_".concat(i),
         angle: i * 30,
         length: hourMarksLength,
@@ -2218,14 +2211,14 @@ function Clock(_ref) {
   }
 
   function renderFace() {
-    return _react["default"].createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "react-clock__face"
     }, renderMinuteMarksFn(), renderHourMarksFn());
   }
 
   function renderHourHandFn() {
-    var angle = value ? (0, _dates.getHours)(value) * 30 + (0, _dates.getMinutes)(value) / 2 + (0, _dates.getSeconds)(value) / 600 : 0;
-    return _react["default"].createElement(_Hand["default"], {
+    var angle = value ? (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getHours)(value) * 30 + (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getMinutes)(value) / 2 + (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getSeconds)(value) / 600 : 0;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Hand__WEBPACK_IMPORTED_MODULE_3__["default"], {
       angle: angle,
       length: hourHandLength,
       name: "hour",
@@ -2239,8 +2232,8 @@ function Clock(_ref) {
       return null;
     }
 
-    var angle = value ? (0, _dates.getHours)(value) * 360 + (0, _dates.getMinutes)(value) * 6 + (0, _dates.getSeconds)(value) / 10 : 0;
-    return _react["default"].createElement(_Hand["default"], {
+    var angle = value ? (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getHours)(value) * 360 + (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getMinutes)(value) * 6 + (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getSeconds)(value) / 10 : 0;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Hand__WEBPACK_IMPORTED_MODULE_3__["default"], {
       angle: angle,
       length: minuteHandLength,
       name: "minute",
@@ -2254,8 +2247,8 @@ function Clock(_ref) {
       return null;
     }
 
-    var angle = value ? (0, _dates.getMinutes)(value) * 360 + (0, _dates.getSeconds)(value) * 6 : 0;
-    return _react["default"].createElement(_Hand["default"], {
+    var angle = value ? (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getMinutes)(value) * 360 + (0,_wojtekmaj_date_utils__WEBPACK_IMPORTED_MODULE_2__.getSeconds)(value) * 6 : 0;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Hand__WEBPACK_IMPORTED_MODULE_3__["default"], {
       angle: angle,
       length: secondHandLength,
       name: "second",
@@ -2264,8 +2257,8 @@ function Clock(_ref) {
     });
   }
 
-  return _react["default"].createElement("time", {
-    className: (0, _mergeClassNames["default"])('react-clock', className),
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("time", {
+    className: (0,merge_class_names__WEBPACK_IMPORTED_MODULE_4__["default"])('react-clock', className),
     dateTime: value instanceof Date ? value.toISOString() : value,
     style: {
       width: "".concat(size, "px"),
@@ -2273,89 +2266,67 @@ function Clock(_ref) {
     }
   }, renderFace(), renderHourHandFn(), renderMinuteHandFn(), renderSecondHandFn());
 }
-
-Clock.defaultProps = {
-  hourHandLength: 50,
-  hourHandWidth: 4,
-  hourMarksLength: 10,
-  hourMarksWidth: 3,
-  minuteHandLength: 70,
-  minuteHandWidth: 2,
-  minuteMarksLength: 6,
-  minuteMarksWidth: 1,
-  renderHourMarks: true,
-  renderMinuteHand: true,
-  renderMinuteMarks: true,
-  renderSecondHand: true,
-  secondHandLength: 90,
-  secondHandWidth: 1,
-  size: 150
-};
 Clock.propTypes = {
-  className: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].arrayOf(_propTypes["default"].string)]),
-  hourHandLength: _propTypes2.isHandLength,
-  hourHandOppositeLength: _propTypes2.isOppositeHandLength,
-  hourHandWidth: _propTypes2.isHandWidth,
-  hourMarksLength: _propTypes2.isMarkLength,
-  hourMarksWidth: _propTypes2.isMarkWidth,
-  minuteHandLength: _propTypes2.isHandLength,
-  minuteHandOppositeLength: _propTypes2.isOppositeHandLength,
-  minuteHandWidth: _propTypes2.isHandWidth,
-  minuteMarksLength: _propTypes2.isMarkLength,
-  minuteMarksWidth: _propTypes2.isMarkWidth,
-  renderHourMarks: _propTypes["default"].bool,
-  renderMinuteHand: _propTypes["default"].bool,
-  renderMinuteMarks: _propTypes["default"].bool,
-  renderNumbers: _propTypes["default"].bool,
-  renderSecondHand: _propTypes["default"].bool,
-  secondHandLength: _propTypes2.isHandLength,
-  secondHandOppositeLength: _propTypes2.isOppositeHandLength,
-  secondHandWidth: _propTypes2.isHandWidth,
-  size: _propTypes["default"].number,
-  value: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].instanceOf(Date)])
+  className: prop_types__WEBPACK_IMPORTED_MODULE_5___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_5___default().string), prop_types__WEBPACK_IMPORTED_MODULE_5___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_5___default().string))]),
+  hourHandLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isHandLength,
+  hourHandOppositeLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isOppositeHandLength,
+  hourHandWidth: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isHandWidth,
+  hourMarksLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isMarkLength,
+  hourMarksWidth: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isMarkWidth,
+  minuteHandLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isHandLength,
+  minuteHandOppositeLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isOppositeHandLength,
+  minuteHandWidth: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isHandWidth,
+  minuteMarksLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isMarkLength,
+  minuteMarksWidth: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isMarkWidth,
+  renderHourMarks: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().bool),
+  renderMinuteHand: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().bool),
+  renderMinuteMarks: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().bool),
+  renderNumbers: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().bool),
+  renderSecondHand: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().bool),
+  secondHandLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isHandLength,
+  secondHandOppositeLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isOppositeHandLength,
+  secondHandWidth: _shared_propTypes__WEBPACK_IMPORTED_MODULE_6__.isHandWidth,
+  size: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().number),
+  value: prop_types__WEBPACK_IMPORTED_MODULE_5___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_5___default().string), prop_types__WEBPACK_IMPORTED_MODULE_5___default().instanceOf(Date)])
 };
 
 /***/ }),
 
-/***/ "./node_modules/react-clock/dist/Hand.js":
-/*!***********************************************!*\
-  !*** ./node_modules/react-clock/dist/Hand.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/react-clock/dist/esm/Hand.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-clock/dist/esm/Hand.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Hand)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _shared_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/propTypes */ "./node_modules/react-clock/dist/esm/shared/propTypes.js");
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = Hand;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _propTypes2 = __webpack_require__(/*! ./shared/propTypes */ "./node_modules/react-clock/dist/shared/propTypes.js");
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
 
 function Hand(_ref) {
-  var angle = _ref.angle,
+  var _ref$angle = _ref.angle,
+      angle = _ref$angle === void 0 ? 0 : _ref$angle,
       name = _ref.name,
-      length = _ref.length,
-      oppositeLength = _ref.oppositeLength,
-      width = _ref.width;
-  return _react["default"].createElement("div", {
+      _ref$length = _ref.length,
+      length = _ref$length === void 0 ? 100 : _ref$length,
+      _ref$oppositeLength = _ref.oppositeLength,
+      oppositeLength = _ref$oppositeLength === void 0 ? 10 : _ref$oppositeLength,
+      _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 1 : _ref$width;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "react-clock__hand react-clock__".concat(name, "-hand"),
     style: {
       transform: "rotate(".concat(angle, "deg)")
     }
-  }, _react["default"].createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "react-clock__hand__body react-clock__".concat(name, "-hand__body"),
     style: {
       width: "".concat(width, "px"),
@@ -2364,69 +2335,57 @@ function Hand(_ref) {
     }
   }));
 }
-
-Hand.defaultProps = {
-  angle: 0,
-  length: 100,
-  oppositeLength: 10,
-  width: 1
-};
 Hand.propTypes = {
-  angle: _propTypes["default"].number,
-  length: _propTypes2.isHandLength,
-  name: _propTypes["default"].string.isRequired,
-  oppositeLength: _propTypes2.isHandLength,
-  width: _propTypes["default"].number
+  angle: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),
+  length: _shared_propTypes__WEBPACK_IMPORTED_MODULE_2__.isHandLength,
+  name: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  oppositeLength: _shared_propTypes__WEBPACK_IMPORTED_MODULE_2__.isHandLength,
+  width: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number)
 };
 
 /***/ }),
 
-/***/ "./node_modules/react-clock/dist/Mark.js":
-/*!***********************************************!*\
-  !*** ./node_modules/react-clock/dist/Mark.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/react-clock/dist/esm/Mark.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-clock/dist/esm/Mark.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Mark)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _shared_propTypes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/propTypes */ "./node_modules/react-clock/dist/esm/shared/propTypes.js");
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = Mark;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _propTypes2 = __webpack_require__(/*! ./shared/propTypes */ "./node_modules/react-clock/dist/shared/propTypes.js");
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
 
 function Mark(_ref) {
-  var angle = _ref.angle,
-      length = _ref.length,
+  var _ref$angle = _ref.angle,
+      angle = _ref$angle === void 0 ? 0 : _ref$angle,
+      _ref$length = _ref.length,
+      length = _ref$length === void 0 ? 10 : _ref$length,
       name = _ref.name,
-      width = _ref.width,
+      _ref$width = _ref.width,
+      width = _ref$width === void 0 ? 1 : _ref$width,
       number = _ref.number;
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "react-clock__mark react-clock__".concat(name, "-mark"),
     style: {
       transform: "rotate(".concat(angle, "deg)")
     }
-  }, _react["default"].createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "react-clock__mark__body react-clock__".concat(name, "-mark__body"),
     style: {
       width: "".concat(width, "px"),
       top: 0,
       bottom: "".concat(100 - length / 2, "%")
     }
-  }), number && _react["default"].createElement("div", {
+  }), number && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "react-clock__mark__number",
     style: {
       transform: "rotate(-".concat(angle, "deg)"),
@@ -2434,252 +2393,49 @@ function Mark(_ref) {
     }
   }, number));
 }
-
-Mark.defaultProps = {
-  angle: 0,
-  length: 10,
-  width: 1
-};
 Mark.propTypes = {
-  angle: _propTypes["default"].number,
-  length: _propTypes2.isMarkLength,
-  name: _propTypes["default"].string.isRequired,
-  number: _propTypes["default"].number,
-  width: _propTypes2.isMarkWidth
+  angle: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),
+  length: _shared_propTypes__WEBPACK_IMPORTED_MODULE_2__.isMarkLength,
+  name: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
+  number: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().number),
+  width: _shared_propTypes__WEBPACK_IMPORTED_MODULE_2__.isMarkWidth
 };
 
 /***/ }),
 
-/***/ "./node_modules/react-clock/dist/entry.nostyle.js":
-/*!********************************************************!*\
-  !*** ./node_modules/react-clock/dist/entry.nostyle.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Clock", {
-  enumerable: true,
-  get: function get() {
-    return _Clock["default"];
-  }
-});
-exports["default"] = void 0;
-
-var _Clock = _interopRequireDefault(__webpack_require__(/*! ./Clock */ "./node_modules/react-clock/dist/Clock.js"));
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-var _default = _Clock["default"];
-exports["default"] = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-clock/dist/shared/dates.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/react-clock/dist/shared/dates.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getHours = getHours;
-exports.getMinutes = getMinutes;
-exports.getSeconds = getSeconds;
-var hourOptionalSecondsRegExp = /^(([0-1])?[0-9]|2[0-3]):[0-5][0-9](:([0-5][0-9]))?$/;
-var hourRegExp = /^(([0-1])?[0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9])$/;
-
-function getHours(date) {
-  if (date instanceof Date) {
-    return date.getHours();
-  }
-
-  if (typeof date === 'string' && hourOptionalSecondsRegExp.test(date)) {
-    var hourString = date.split(':')[0];
-    return parseInt(hourString, 10);
-  }
-
-  throw new Error("Failed to get hours from date: ".concat(date, "."));
-}
-
-function getMinutes(date) {
-  if (date instanceof Date) {
-    return date.getMinutes();
-  }
-
-  if (typeof date === 'string' && hourOptionalSecondsRegExp.test(date)) {
-    var minuteString = date.split(':')[1];
-    return parseInt(minuteString, 10);
-  }
-
-  throw new Error("Failed to get minutes from date: ".concat(date, "."));
-}
-
-function getSeconds(date) {
-  if (date instanceof Date) {
-    return date.getSeconds();
-  }
-
-  if (typeof date === 'string') {
-    if (hourRegExp.test(date)) {
-      var secondString = date.split(':')[2];
-      return parseInt(secondString, 10);
-    }
-
-    if (hourOptionalSecondsRegExp.test(date)) {
-      return 0;
-    }
-  }
-
-  throw new Error("Failed to get seconds from date: ".concat(date, "."));
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-clock/dist/shared/propTypes.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-clock/dist/shared/propTypes.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.isMarkWidth = exports.isMarkLength = exports.isHandWidth = exports.isOppositeHandLength = exports.isHandLength = void 0;
-
-var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-clock/dist/shared/utils.js");
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-var isNumberBetween = function isNumberBetween(min, max) {
-  return function (props, propName, componentName) {
-    var value = props[propName];
-
-    if ((0, _utils.isDefined)(value)) {
-      if (typeof value !== 'number') {
-        return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(value), "` supplied to `").concat(componentName, "`, expected `number`."));
-      }
-
-      if (value < min || value > max) {
-        return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(value), "` supplied to `").concat(componentName, "`, length must be between ").concat(min, " and ").concat(max, "."));
-      }
-    } // Everything is fine
-
-
-    return null;
-  };
-};
-
-var isHandLength = isNumberBetween(0, 100);
-exports.isHandLength = isHandLength;
-var isOppositeHandLength = isNumberBetween(-100, 100);
-exports.isOppositeHandLength = isOppositeHandLength;
-
-var isHandWidth = function isHandWidth(props, propName, componentName) {
-  var width = props[propName];
-
-  if ((0, _utils.isDefined)(width)) {
-    if (typeof width !== 'number') {
-      return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(width), "` supplied to `").concat(componentName, "`, expected `number`."));
-    }
-
-    if (width < 0) {
-      return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(width), "` supplied to `").concat(componentName, "`, width must be greater or equal to 0."));
-    }
-  } // Everything is fine
-
-
-  return null;
-};
-
-exports.isHandWidth = isHandWidth;
-var isMarkLength = isHandLength;
-exports.isMarkLength = isMarkLength;
-var isMarkWidth = isHandWidth;
-exports.isMarkWidth = isMarkWidth;
-
-/***/ }),
-
-/***/ "./node_modules/react-clock/dist/shared/utils.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/react-clock/dist/shared/utils.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.isDefined = void 0;
-/* eslint-disable import/prefer-default-export */
-
-/**
- * Checks whether a variable is defined.
- *
- * @param {*} variable Variable to check
- */
-
-var isDefined = function isDefined(variable) {
-  return typeof variable !== 'undefined';
-};
-
-exports.isDefined = isDefined;
-
-/***/ }),
-
-/***/ "./node_modules/react-fit/dist/esm/Fit.js":
-/*!************************************************!*\
-  !*** ./node_modules/react-fit/dist/esm/Fit.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/react-clock/dist/esm/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-clock/dist/esm/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Fit; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var detect_element_overflow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! detect-element-overflow */ "./node_modules/detect-element-overflow/dist/esm/index.js");
-/* harmony import */ var _shared_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared/utils */ "./node_modules/react-fit/dist/esm/shared/utils.js");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Clock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Clock */ "./node_modules/react-clock/dist/esm/Clock.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_Clock__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./node_modules/react-clock/dist/esm/shared/propTypes.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-clock/dist/esm/shared/propTypes.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isHandLength": () => (/* binding */ isHandLength),
+/* harmony export */   "isOppositeHandLength": () => (/* binding */ isOppositeHandLength),
+/* harmony export */   "isHandWidth": () => (/* binding */ isHandWidth),
+/* harmony export */   "isMarkLength": () => (/* binding */ isMarkLength),
+/* harmony export */   "isMarkWidth": () => (/* binding */ isMarkWidth)
+/* harmony export */ });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./node_modules/react-clock/dist/esm/shared/utils.js");
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -2695,6 +2451,95 @@ function _typeof(obj) {
 
   return _typeof(obj);
 }
+
+
+
+var isNumberBetween = function isNumberBetween(min, max) {
+  return function (props, propName, componentName) {
+    var value = props[propName];
+
+    if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isDefined)(value)) {
+      if (typeof value !== 'number') {
+        return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(value), "` supplied to `").concat(componentName, "`, expected `number`."));
+      }
+
+      if (value < min || value > max) {
+        return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(value), "` supplied to `").concat(componentName, "`, length must be between ").concat(min, " and ").concat(max, "."));
+      }
+    } // Everything is fine
+
+
+    return null;
+  };
+};
+
+var isHandLength = isNumberBetween(0, 100);
+var isOppositeHandLength = isNumberBetween(-100, 100);
+var isHandWidth = function isHandWidth(props, propName, componentName) {
+  var width = props[propName];
+
+  if ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.isDefined)(width)) {
+    if (typeof width !== 'number') {
+      return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(width), "` supplied to `").concat(componentName, "`, expected `number`."));
+    }
+
+    if (width < 0) {
+      return new Error("Invalid prop `".concat(propName, "` of type `").concat(_typeof(width), "` supplied to `").concat(componentName, "`, width must be greater or equal to 0."));
+    }
+  } // Everything is fine
+
+
+  return null;
+};
+var isMarkLength = isHandLength;
+var isMarkWidth = isHandWidth;
+
+/***/ }),
+
+/***/ "./node_modules/react-clock/dist/esm/shared/utils.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-clock/dist/esm/shared/utils.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isDefined": () => (/* binding */ isDefined)
+/* harmony export */ });
+/* eslint-disable import/prefer-default-export */
+
+/**
+ * Checks whether a variable is defined.
+ *
+ * @param {*} variable Variable to check
+ */
+var isDefined = function isDefined(variable) {
+  return typeof variable !== 'undefined';
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-fit/dist/esm/Fit.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-fit/dist/esm/Fit.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Fit)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var detect_element_overflow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! detect-element-overflow */ "./node_modules/detect-element-overflow/dist/esm/index.js");
+/* harmony import */ var tiny_warning__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tiny-warning */ "./node_modules/tiny-warning/dist/tiny-warning.esm.js");
+var _excluded = ["invertAxis", "invertSecondaryAxis"];
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -2743,11 +2588,13 @@ function _setPrototypeOf(o, p) {
 }
 
 function _createSuper(Derived) {
-  return function () {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
     var Super = _getPrototypeOf(Derived),
         result;
 
-    if (_isNativeReflectConstruct()) {
+    if (hasNativeReflectConstruct) {
       var NewTarget = _getPrototypeOf(this).constructor;
 
       result = Reflect.construct(Super, arguments, NewTarget);
@@ -2762,6 +2609,8 @@ function _createSuper(Derived) {
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
   }
 
   return _assertThisInitialized(self);
@@ -2781,7 +2630,7 @@ function _isNativeReflectConstruct() {
   if (typeof Proxy === "function") return true;
 
   try {
-    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
     return true;
   } catch (e) {
     return false;
@@ -2836,9 +2685,13 @@ function ownKeys(object, enumerableOnly) {
 
   if (Object.getOwnPropertySymbols) {
     var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
+
+    if (enumerableOnly) {
+      symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+    }
+
     keys.push.apply(keys, symbols);
   }
 
@@ -2878,6 +2731,22 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
+}
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
 }
 
 
@@ -2926,8 +2795,8 @@ function alignAxis(_ref) {
       spacing = _ref.spacing;
   var style = window.getComputedStyle(element);
   var parent = container.parentElement;
-  var scrollContainerCollisions = Object(detect_element_overflow__WEBPACK_IMPORTED_MODULE_3__["default"])(parent, scrollContainer);
-  var documentCollisions = Object(detect_element_overflow__WEBPACK_IMPORTED_MODULE_3__["default"])(parent, document.documentElement);
+  var scrollContainerCollisions = (0,detect_element_overflow__WEBPACK_IMPORTED_MODULE_2__["default"])(parent, scrollContainer);
+  var documentCollisions = (0,detect_element_overflow__WEBPACK_IMPORTED_MODULE_2__["default"])(parent, document.documentElement);
   var isX = axis === 'x';
   var startProperty = isX ? 'left' : 'top';
   var endProperty = isX ? 'right' : 'bottom';
@@ -2940,8 +2809,10 @@ function alignAxis(_ref) {
   var clientSizeProperty = "client".concat(uppercasedSizeProperty);
   var minSizeProperty = "min-".concat(sizeProperty);
   var scrollbarWidth = scrollContainer[offsetSizeProperty] - scrollContainer[clientSizeProperty];
-  var availableStartSpace = -Math.max(scrollContainerCollisions[overflowStartProperty], documentCollisions[overflowStartProperty] + document.documentElement[scrollProperty]) - spacing;
-  var availableEndSpace = -Math.max(scrollContainerCollisions[overflowEndProperty], documentCollisions[overflowEndProperty] - document.documentElement[scrollProperty]) - spacing - scrollbarWidth;
+  var startSpacing = _typeof(spacing) === 'object' ? spacing[startProperty] : spacing;
+  var availableStartSpace = -Math.max(scrollContainerCollisions[overflowStartProperty], documentCollisions[overflowStartProperty] + document.documentElement[scrollProperty]) - startSpacing;
+  var endSpacing = _typeof(spacing) === 'object' ? spacing[endProperty] : spacing;
+  var availableEndSpace = -Math.max(scrollContainerCollisions[overflowEndProperty], documentCollisions[overflowEndProperty] - document.documentElement[scrollProperty]) - endSpacing - scrollbarWidth;
 
   if (secondary) {
     availableStartSpace += parent[clientSizeProperty];
@@ -2950,17 +2821,17 @@ function alignAxis(_ref) {
 
   var offsetSize = element[offsetSizeProperty];
 
-  var displayStart = function displayStart() {
-    element.style[startProperty] = 'unset';
+  function displayStart() {
+    element.style[startProperty] = 'auto';
     element.style[endProperty] = secondary ? '0' : '100%';
-  };
+  }
 
-  var displayEnd = function displayEnd() {
+  function displayEnd() {
     element.style[startProperty] = secondary ? '0' : '100%';
-    element.style[endProperty] = 'unset';
-  };
+    element.style[endProperty] = 'auto';
+  }
 
-  var displayIfFits = function displayIfFits(availableSpace, display) {
+  function displayIfFits(availableSpace, display) {
     var fits = offsetSize <= availableSpace;
 
     if (fits) {
@@ -2968,29 +2839,26 @@ function alignAxis(_ref) {
     }
 
     return fits;
-  };
+  }
 
-  var displayStartIfFits = function displayStartIfFits() {
+  function displayStartIfFits() {
     return displayIfFits(availableStartSpace, displayStart);
-  };
+  }
 
-  var displayEndIfFits = function displayEndIfFits() {
+  function displayEndIfFits() {
     return displayIfFits(availableEndSpace, displayEnd);
-  };
+  }
 
-  var displayWhereverShrinkedFits = function displayWhereverShrinkedFits() {
+  function displayWhereverShrinkedFits() {
     var moreSpaceStart = availableStartSpace > availableEndSpace;
     var minSize = style[minSizeProperty] && parseInt(style[minSizeProperty], 10);
 
-    var shrinkToSize = function shrinkToSize(size) {
-      if (minSize && size < minSize) {
-        Object(_shared_utils__WEBPACK_IMPORTED_MODULE_4__["warnOnDev"])("<Fit />'s child will not fit anywhere with its current ".concat(minSizeProperty, " of ").concat(minSize, "px."));
-      }
-
+    function shrinkToSize(size) {
+      (0,tiny_warning__WEBPACK_IMPORTED_MODULE_3__["default"])(!minSize || size >= minSize, "<Fit />'s child will not fit anywhere with its current ".concat(minSizeProperty, " of ").concat(minSize, "px."));
       var newSize = Math.max(size, minSize || 0);
-      Object(_shared_utils__WEBPACK_IMPORTED_MODULE_4__["warnOnDev"])("<Fit />'s child needed to have its ".concat(sizeProperty, " decreased to ").concat(newSize, "px."));
+      (0,tiny_warning__WEBPACK_IMPORTED_MODULE_3__["default"])(false, "<Fit />'s child needed to have its ".concat(sizeProperty, " decreased to ").concat(newSize, "px."));
       element.style[sizeProperty] = "".concat(newSize, "px");
-    };
+    }
 
     if (moreSpaceStart) {
       shrinkToSize(availableStartSpace);
@@ -2999,7 +2867,7 @@ function alignAxis(_ref) {
       shrinkToSize(availableEndSpace);
       displayEnd();
     }
-  };
+  }
 
   var fits;
 
@@ -3019,24 +2887,24 @@ function alignMainAxis(args) {
 }
 
 function alignSecondaryAxis(args) {
-  alignAxis(_objectSpread({}, args, {
+  alignAxis(_objectSpread(_objectSpread({}, args), {}, {
     axis: args.axis === 'x' ? 'y' : 'x',
     secondary: true
   }));
 }
 
-var alignBothAxis = function alignBothAxis(args) {
+function alignBothAxis(args) {
   var invertAxis = args.invertAxis,
       invertSecondaryAxis = args.invertSecondaryAxis,
-      commonArgs = _objectWithoutProperties(args, ["invertAxis", "invertSecondaryAxis"]);
+      commonArgs = _objectWithoutProperties(args, _excluded);
 
-  alignMainAxis(_objectSpread({}, commonArgs, {
+  alignMainAxis(_objectSpread(_objectSpread({}, commonArgs), {}, {
     invertAxis: invertAxis
   }));
-  alignSecondaryAxis(_objectSpread({}, commonArgs, {
+  alignSecondaryAxis(_objectSpread(_objectSpread({}, commonArgs), {}, {
     invertAxis: invertSecondaryAxis
   }));
-};
+}
 
 var Fit = /*#__PURE__*/function (_Component) {
   _inherits(Fit, _Component);
@@ -3095,7 +2963,7 @@ var Fit = /*#__PURE__*/function (_Component) {
       var position = style.position;
 
       if (position !== 'absolute') {
-        Object(_shared_utils__WEBPACK_IMPORTED_MODULE_4__["warnOnDev"])('<Fit />\'s child does not have absolute position. You should apply `position: absolute` to it.');
+        (0,tiny_warning__WEBPACK_IMPORTED_MODULE_3__["default"])(false, '<Fit />\'s child does not have absolute position. You should apply `position: absolute` to it.');
         element.style.position = 'absolute';
       }
       /**
@@ -3108,7 +2976,7 @@ var Fit = /*#__PURE__*/function (_Component) {
       var parentPosition = parentStyle.position;
 
       if (parentPosition !== 'relative' && parentPosition !== 'absolute') {
-        Object(_shared_utils__WEBPACK_IMPORTED_MODULE_4__["warnOnDev"])('<Fit />\'s parent does not have relative position. You should apply `position: relative` to it.');
+        (0,tiny_warning__WEBPACK_IMPORTED_MODULE_3__["default"])(false, '<Fit />\'s parent does not have relative position. You should apply `position: relative` to it.');
         parent.style.position = 'relative';
       }
 
@@ -3136,7 +3004,7 @@ var Fit = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       if (!isDisplayContentsSupported) {
         // eslint-disable-next-line react/no-find-dom-node
-        var element = Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["findDOMNode"])(this);
+        var element = (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.findDOMNode)(this);
         this.container = element;
         this.element = element;
         this.scrollContainer = findScrollContainer(element);
@@ -3157,10 +3025,10 @@ var Fit = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       var children = this.props.children;
-      var child = react__WEBPACK_IMPORTED_MODULE_0___default.a.Children.only(children);
+      var child = react__WEBPACK_IMPORTED_MODULE_0___default().Children.only(children);
 
       if (isDisplayContentsSupported) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
           ref: function ref(container) {
             _this2.container = container;
             var element = container && container.firstChild;
@@ -3178,15 +3046,20 @@ var Fit = /*#__PURE__*/function (_Component) {
   }]);
 
   return Fit;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 
 Fit.propTypes = {
-  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node,
-  invertAxis: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  invertSecondaryAxis: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  mainAxis: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.oneOf(['x', 'y']),
-  spacing: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().node),
+  invertAxis: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
+  invertSecondaryAxis: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
+  mainAxis: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOf(['x', 'y']),
+  spacing: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_4___default().number), prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+    bottom: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number.isRequired),
+    left: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number.isRequired),
+    right: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number.isRequired),
+    top: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().number.isRequired)
+  })])
 };
 Fit.defaultProps = {
   mainAxis: 'y',
@@ -3195,51 +3068,11 @@ Fit.defaultProps = {
 
 /***/ }),
 
-/***/ "./node_modules/react-fit/dist/esm/shared/utils.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/react-fit/dist/esm/shared/utils.js ***!
-  \*********************************************************/
-/*! exports provided: isProduction, warnOnDev */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isProduction", function() { return isProduction; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "warnOnDev", function() { return warnOnDev; });
-/**
- * Checks whether we're running on a production build or not.
- */
-var isProduction = "development" === 'production';
-
-var consoleOnDev = function consoleOnDev(method) {
-  if (!isProduction) {
-    var _console;
-
-    for (var _len = arguments.length, message = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      message[_key - 1] = arguments[_key];
-    } // eslint-disable-next-line no-console
-
-
-    (_console = console)[method].apply(_console, message);
-  }
-};
-
-var warnOnDev = function warnOnDev() {
-  for (var _len2 = arguments.length, message = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    message[_key2] = arguments[_key2];
-  }
-
-  return consoleOnDev.apply(void 0, ['warn'].concat(message));
-};
-
-/***/ }),
-
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 /** @license React v16.13.1
@@ -3252,7 +3085,7 @@ var warnOnDev = function warnOnDev() {
  */
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 if (true) {
   (function () {
@@ -3440,8 +3273,7 @@ if (true) {
 /*!****************************************!*\
   !*** ./node_modules/react-is/index.js ***!
   \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -3456,15 +3288,14 @@ if (false) {} else {
 /*!********************************************************!*\
   !*** ./node_modules/react-time-picker/dist/Divider.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = Divider;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -3479,7 +3310,7 @@ function _interopRequireDefault(obj) {
 
 function Divider(_ref) {
   var children = _ref.children;
-  return _react["default"].createElement("span", {
+  return /*#__PURE__*/_react["default"].createElement("span", {
     className: "react-time-picker__inputGroup__divider"
   }, children);
 }
@@ -3494,15 +3325,24 @@ Divider.propTypes = {
 /*!**********************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput.js ***!
   \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
+}
+
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
@@ -3539,19 +3379,17 @@ function _interopRequireDefault(obj) {
   };
 }
 
-function _getRequireWildcardCache() {
+function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
+  var cacheBabelInterop = new WeakMap();
+  var cacheNodeInterop = new WeakMap();
+  return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) {
+    return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+  })(nodeInterop);
 }
 
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
+function _interopRequireWildcard(obj, nodeInterop) {
+  if (!nodeInterop && obj && obj.__esModule) {
     return obj;
   }
 
@@ -3561,7 +3399,7 @@ function _interopRequireWildcard(obj) {
     };
   }
 
-  var cache = _getRequireWildcardCache();
+  var cache = _getRequireWildcardCache(nodeInterop);
 
   if (cache && cache.has(obj)) {
     return cache.get(obj);
@@ -3571,7 +3409,7 @@ function _interopRequireWildcard(obj) {
   var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
 
   for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
       var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
 
       if (desc && (desc.get || desc.set)) {
@@ -3591,42 +3429,26 @@ function _interopRequireWildcard(obj) {
   return newObj;
 }
 
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
 
+  if (_i == null) return;
   var _arr = [];
   var _n = true;
   var _d = false;
-  var _e = undefined;
+
+  var _s, _e;
 
   try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -3686,30 +3508,10 @@ function _defineProperties(target, props) {
 function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
   return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
 }
 
 function _inherits(subClass, superClass) {
@@ -3724,6 +3526,9 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
+  Object.defineProperty(subClass, "prototype", {
+    writable: false
+  });
   if (superClass) _setPrototypeOf(subClass, superClass);
 }
 
@@ -3734,6 +3539,63 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
+}
+
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _defineProperty(obj, key, value) {
@@ -3752,25 +3614,38 @@ function _defineProperty(obj, key, value) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 var allViews = ['hour', 'minute', 'second'];
@@ -3807,7 +3682,9 @@ function _renderCustomInputs(placeholder, elementFunctions, allowMultipleInstanc
   }).join('|'), 'g');
   var matches = placeholder.match(pattern);
   return placeholder.split(pattern).reduce(function (arr, element, index) {
-    var divider = element && // eslint-disable-next-line react/no-array-index-key
+    var divider = element &&
+    /*#__PURE__*/
+    // eslint-disable-next-line react/no-array-index-key
     _react["default"].createElement(_Divider["default"], {
       key: "separator_".concat(index)
     }, element);
@@ -3832,12 +3709,16 @@ function _renderCustomInputs(placeholder, elementFunctions, allowMultipleInstanc
   }, []);
 }
 
+var formatNumber = (0, _dateFormatter.getNumberFormatter)({
+  useGrouping: false
+});
+
 var TimeInput = /*#__PURE__*/function (_PureComponent) {
   _inherits(TimeInput, _PureComponent);
 
-  function TimeInput() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(TimeInput);
 
+  function TimeInput() {
     var _this;
 
     _classCallCheck(this, TimeInput);
@@ -3846,7 +3727,7 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TimeInput)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       amPm: null,
@@ -3854,6 +3735,16 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
       minute: null,
       second: null
     });
+
+    _defineProperty(_assertThisInitialized(_this), "amPmInput", /*#__PURE__*/(0, _react.createRef)());
+
+    _defineProperty(_assertThisInitialized(_this), "hour12Input", /*#__PURE__*/(0, _react.createRef)());
+
+    _defineProperty(_assertThisInitialized(_this), "hour24Input", /*#__PURE__*/(0, _react.createRef)());
+
+    _defineProperty(_assertThisInitialized(_this), "minuteInput", /*#__PURE__*/(0, _react.createRef)());
+
+    _defineProperty(_assertThisInitialized(_this), "secondInput", /*#__PURE__*/(0, _react.createRef)());
 
     _defineProperty(_assertThisInitialized(_this), "onClick", function (event) {
       if (event.target === event.currentTarget) {
@@ -3916,7 +3807,7 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
           {
             _this.setState(function (prevState) {
               return {
-                hour: value ? (0, _dates.convert12to24)(parseInt(value, 10), prevState.amPm) : null
+                hour: value ? (0, _dates.convert12to24)(parseInt(value, 10), prevState.amPm).toString() : ''
               };
             }, _this.onChangeExternal);
 
@@ -3926,7 +3817,7 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
         case 'hour24':
           {
             _this.setState({
-              hour: value ? parseInt(value, 10) : null
+              hour: value
             }, _this.onChangeExternal);
 
             break;
@@ -3934,7 +3825,7 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
 
         default:
           {
-            _this.setState(_defineProperty({}, name, value ? parseInt(value, 10) : null), _this.onChangeExternal);
+            _this.setState(_defineProperty({}, name, value), _this.onChangeExternal);
           }
       }
     });
@@ -3973,8 +3864,8 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
         return;
       }
 
-      var formElements = [_this.hour12Input, _this.hour24Input, _this.minuteInput, _this.secondInput, _this.amPmInput].filter(Boolean);
-      var formElementsWithoutSelect = formElements.slice(0, -1);
+      var formElements = [_this.amPmInput.current, _this.hour12Input.current, _this.hour24Input.current, _this.minuteInput.current, _this.secondInput.current].filter(Boolean);
+      var formElementsWithoutSelect = formElements.slice(1);
       var values = {};
       formElements.forEach(function (formElement) {
         values[formElement.name] = formElement.value;
@@ -4025,12 +3916,14 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
       }
 
       var showLeadingZeros = currentMatch && currentMatch.length === 2;
-      return _react["default"].createElement(_Hour12Input["default"], _extends({
+      return /*#__PURE__*/_react["default"].createElement(_Hour12Input["default"], _extends({
         key: "hour12"
       }, _this.commonInputProps, {
         amPm: amPm,
-        ariaLabel: hourAriaLabel,
+        ariaLabel: hourAriaLabel // eslint-disable-next-line jsx-a11y/no-autofocus
+        ,
         autoFocus: index === 0 && autoFocus,
+        inputRef: _this.hour12Input,
         placeholder: hourPlaceholder,
         showLeadingZeros: showLeadingZeros,
         value: hour
@@ -4049,11 +3942,13 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
       }
 
       var showLeadingZeros = currentMatch && currentMatch.length === 2;
-      return _react["default"].createElement(_Hour24Input["default"], _extends({
+      return /*#__PURE__*/_react["default"].createElement(_Hour24Input["default"], _extends({
         key: "hour24"
       }, _this.commonInputProps, {
-        ariaLabel: hourAriaLabel,
+        ariaLabel: hourAriaLabel // eslint-disable-next-line jsx-a11y/no-autofocus
+        ,
         autoFocus: index === 0 && autoFocus,
+        inputRef: _this.hour24Input,
         placeholder: hourPlaceholder,
         showLeadingZeros: showLeadingZeros,
         value: hour
@@ -4074,12 +3969,14 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
       }
 
       var showLeadingZeros = currentMatch && currentMatch.length === 2;
-      return _react["default"].createElement(_MinuteInput["default"], _extends({
+      return /*#__PURE__*/_react["default"].createElement(_MinuteInput["default"], _extends({
         key: "minute"
       }, _this.commonInputProps, {
-        ariaLabel: minuteAriaLabel,
+        ariaLabel: minuteAriaLabel // eslint-disable-next-line jsx-a11y/no-autofocus
+        ,
         autoFocus: index === 0 && autoFocus,
         hour: hour,
+        inputRef: _this.minuteInput,
         placeholder: minutePlaceholder,
         showLeadingZeros: showLeadingZeros,
         value: minute
@@ -4101,12 +3998,14 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
       }
 
       var showLeadingZeros = currentMatch ? currentMatch.length === 2 : true;
-      return _react["default"].createElement(_SecondInput["default"], _extends({
+      return /*#__PURE__*/_react["default"].createElement(_SecondInput["default"], _extends({
         key: "second"
       }, _this.commonInputProps, {
-        ariaLabel: secondAriaLabel,
+        ariaLabel: secondAriaLabel // eslint-disable-next-line jsx-a11y/no-autofocus
+        ,
         autoFocus: index === 0 && autoFocus,
         hour: hour,
+        inputRef: _this.secondInput,
         minute: minute,
         placeholder: secondPlaceholder,
         showLeadingZeros: showLeadingZeros,
@@ -4120,11 +4019,13 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
           autoFocus = _this$props5.autoFocus,
           locale = _this$props5.locale;
       var amPm = _this.state.amPm;
-      return _react["default"].createElement(_AmPm["default"], _extends({
+      return /*#__PURE__*/_react["default"].createElement(_AmPm["default"], _extends({
         key: "ampm"
       }, _this.commonInputProps, {
-        ariaLabel: amPmAriaLabel,
+        ariaLabel: amPmAriaLabel // eslint-disable-next-line jsx-a11y/no-autofocus
+        ,
         autoFocus: index === 0 && autoFocus,
+        inputRef: _this.amPmInput,
         locale: locale,
         onChange: _this.onChangeAmPm,
         value: amPm
@@ -4135,11 +4036,35 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
   }
 
   _createClass(TimeInput, [{
-    key: "getProcessedValue",
+    key: "formatTime",
+    get: function get() {
+      var maxDetail = this.props.maxDetail;
+      var options = {
+        hour: 'numeric'
+      };
+      var level = allViews.indexOf(maxDetail);
 
+      if (level >= 1) {
+        options.minute = 'numeric';
+      }
+
+      if (level >= 2) {
+        options.second = 'numeric';
+      }
+
+      return (0, _dateFormatter.getFormatter)(options);
+    }
+  }, {
+    key: "formatNumber",
+    get: function get() {
+      return formatNumber;
+    }
     /**
      * Gets current value in a desired format.
      */
+
+  }, {
+    key: "getProcessedValue",
     value: function getProcessedValue(value) {
       var _this2 = this;
 
@@ -4164,6 +4089,59 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
      */
 
   }, {
+    key: "valueType",
+    get: function get() {
+      var maxDetail = this.props.maxDetail;
+      return maxDetail;
+    }
+  }, {
+    key: "divider",
+    get: function get() {
+      var dividers = this.placeholder.match(/[^0-9a-z]/i);
+      return dividers ? dividers[0] : null;
+    }
+  }, {
+    key: "placeholder",
+    get: function get() {
+      var _this$props6 = this.props,
+          format = _this$props6.format,
+          locale = _this$props6.locale;
+
+      if (format) {
+        return format;
+      }
+
+      var hour24 = 21;
+      var hour12 = 9;
+      var minute = 13;
+      var second = 14;
+      var date = new Date(2017, 0, 1, hour24, minute, second);
+      return this.formatTime(locale, date).replace(this.formatNumber(locale, hour12), 'h').replace(this.formatNumber(locale, hour24), 'H').replace(this.formatNumber(locale, minute), 'mm').replace(this.formatNumber(locale, second), 'ss').replace(new RegExp((0, _utils.getAmPmLabels)(locale).join('|')), 'a');
+    }
+  }, {
+    key: "commonInputProps",
+    get: function get() {
+      var _this$props7 = this.props,
+          className = _this$props7.className,
+          disabled = _this$props7.disabled,
+          isClockOpen = _this$props7.isClockOpen,
+          maxTime = _this$props7.maxTime,
+          minTime = _this$props7.minTime,
+          required = _this$props7.required;
+      return {
+        className: className,
+        disabled: disabled,
+        maxTime: maxTime,
+        minTime: minTime,
+        onChange: this.onChange,
+        onKeyDown: this.onKeyDown,
+        onKeyUp: this.onKeyUp,
+        placeholder: '--',
+        // This is only for showing validity when editing
+        required: required || isClockOpen
+      };
+    }
+  }, {
     key: "renderCustomInputs",
     value: function renderCustomInputs() {
       var placeholder = this.placeholder;
@@ -4181,15 +4159,15 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
   }, {
     key: "renderNativeInput",
     value: function renderNativeInput() {
-      var _this$props6 = this.props,
-          disabled = _this$props6.disabled,
-          maxTime = _this$props6.maxTime,
-          minTime = _this$props6.minTime,
-          name = _this$props6.name,
-          nativeInputAriaLabel = _this$props6.nativeInputAriaLabel,
-          required = _this$props6.required,
-          value = _this$props6.value;
-      return _react["default"].createElement(_NativeInput["default"], {
+      var _this$props8 = this.props,
+          disabled = _this$props8.disabled,
+          maxTime = _this$props8.maxTime,
+          minTime = _this$props8.minTime,
+          name = _this$props8.name,
+          nativeInputAriaLabel = _this$props8.nativeInputAriaLabel,
+          required = _this$props8.required,
+          value = _this$props8.value;
+      return /*#__PURE__*/_react["default"].createElement(_NativeInput["default"], {
         key: "time",
         ariaLabel: nativeInputAriaLabel,
         disabled: disabled,
@@ -4206,100 +4184,14 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var className = this.props.className;
-      /* eslint-disable jsx-a11y/click-events-have-key-events */
-
-      /* eslint-disable jsx-a11y/no-static-element-interactions */
-
-      return _react["default"].createElement("div", {
-        className: className,
-        onClick: this.onClick
-      }, this.renderNativeInput(), this.renderCustomInputs());
-    }
-  }, {
-    key: "formatTime",
-    get: function get() {
-      var maxDetail = this.props.maxDetail;
-      var options = {
-        hour: 'numeric'
-      };
-      var level = allViews.indexOf(maxDetail);
-
-      if (level >= 1) {
-        options.minute = 'numeric';
-      }
-
-      if (level >= 2) {
-        options.second = 'numeric';
-      }
-
-      return (0, _dateFormatter.getFormatter)(options);
-    } // eslint-disable-next-line class-methods-use-this
-
-  }, {
-    key: "formatNumber",
-    get: function get() {
-      var options = {
-        useGrouping: false
-      };
-      return (0, _dateFormatter.getFormatter)(options);
-    }
-  }, {
-    key: "valueType",
-    get: function get() {
-      var maxDetail = this.props.maxDetail;
-      return maxDetail;
-    }
-  }, {
-    key: "divider",
-    get: function get() {
-      return this.placeholder.match(/[^0-9a-z]/i)[0];
-    }
-  }, {
-    key: "placeholder",
-    get: function get() {
-      var _this$props7 = this.props,
-          format = _this$props7.format,
-          locale = _this$props7.locale;
-
-      if (format) {
-        return format;
-      }
-
-      var hour24 = 21;
-      var hour12 = 9;
-      var minute = 13;
-      var second = 14;
-      var date = new Date(2017, 0, 1, hour24, minute, second);
-      return this.formatTime(locale, date).replace(this.formatNumber(locale, hour12), 'h').replace(this.formatNumber(locale, hour24), 'H').replace(this.formatNumber(locale, minute), 'mm').replace(this.formatNumber(locale, second), 'ss').replace(new RegExp((0, _utils.getAmPmLabels)(locale).join('|')), 'a');
-    }
-  }, {
-    key: "commonInputProps",
-    get: function get() {
-      var _this3 = this;
-
-      var _this$props8 = this.props,
-          className = _this$props8.className,
-          disabled = _this$props8.disabled,
-          isClockOpen = _this$props8.isClockOpen,
-          maxTime = _this$props8.maxTime,
-          minTime = _this$props8.minTime,
-          required = _this$props8.required;
-      return {
-        className: className,
-        disabled: disabled,
-        itemRef: function itemRef(ref, name) {
-          // Save a reference to each input field
-          _this3["".concat(name, "Input")] = ref;
-        },
-        maxTime: maxTime,
-        minTime: minTime,
-        onChange: this.onChange,
-        onKeyDown: this.onKeyDown,
-        onKeyUp: this.onKeyUp,
-        placeholder: '--',
-        // This is only for showing validity when editing
-        required: required || isClockOpen
-      };
+      return (
+        /*#__PURE__*/
+        // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+        _react["default"].createElement("div", {
+          className: className,
+          onClick: this.onClick
+        }, this.renderNativeInput(), this.renderCustomInputs())
+      );
     }
   }], [{
     key: "getDerivedStateFromProps",
@@ -4323,17 +4215,17 @@ var TimeInput = /*#__PURE__*/function (_PureComponent) {
       var nextValue = nextProps.value;
 
       if ( // Toggling calendar visibility resets values
-      nextState.isClockOpen // Flag was toggled
-      || hoursAreDifferent(nextValue, prevState.value)) {
+      nextState.isClockOpen || // Flag was toggled
+      hoursAreDifferent(nextValue, prevState.value)) {
         if (nextValue) {
           var _convert24to = (0, _dates.convert24to12)((0, _dateUtils.getHours)(nextValue));
 
           var _convert24to2 = _slicedToArray(_convert24to, 2);
 
           nextState.amPm = _convert24to2[1];
-          nextState.hour = (0, _dateUtils.getHours)(nextValue);
-          nextState.minute = (0, _dateUtils.getMinutes)(nextValue);
-          nextState.second = (0, _dateUtils.getSeconds)(nextValue);
+          nextState.hour = (0, _dateUtils.getHours)(nextValue).toString();
+          nextState.minute = (0, _dateUtils.getMinutes)(nextValue).toString();
+          nextState.second = (0, _dateUtils.getSeconds)(nextValue).toString();
         } else {
           nextState.amPm = null;
           nextState.hour = null;
@@ -4386,15 +4278,14 @@ TimeInput.propTypes = {
 /*!***************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput/AmPm.js ***!
   \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = AmPm;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -4418,25 +4309,44 @@ function _interopRequireDefault(obj) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
 
+  if (_i == null) return;
   var _arr = [];
   var _n = true;
   var _d = false;
-  var _e = undefined;
+
+  var _s, _e;
 
   try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -4463,7 +4373,7 @@ function AmPm(_ref) {
   var ariaLabel = _ref.ariaLabel,
       className = _ref.className,
       disabled = _ref.disabled,
-      itemRef = _ref.itemRef,
+      inputRef = _ref.inputRef,
       locale = _ref.locale,
       maxTime = _ref.maxTime,
       minTime = _ref.minTime,
@@ -4479,25 +4389,23 @@ function AmPm(_ref) {
       amLabel = _getAmPmLabels2[0],
       pmLabel = _getAmPmLabels2[1];
 
-  return _react["default"].createElement("select", {
+  return /*#__PURE__*/_react["default"].createElement("select", {
     "aria-label": ariaLabel,
     className: (0, _mergeClassNames["default"])("".concat(className, "__input"), "".concat(className, "__").concat(name)),
+    "data-input": "true",
+    "data-select": "true",
     disabled: disabled,
     name: name,
     onChange: onChange,
-    ref: function ref(_ref2) {
-      if (itemRef) {
-        itemRef(_ref2, name);
-      }
-    },
+    ref: inputRef,
     required: required,
     value: value !== null ? value : ''
-  }, !value && _react["default"].createElement("option", {
+  }, !value && /*#__PURE__*/_react["default"].createElement("option", {
     value: ""
-  }, "--"), _react["default"].createElement("option", {
+  }, "--"), /*#__PURE__*/_react["default"].createElement("option", {
     disabled: amDisabled,
     value: "am"
-  }, amLabel), _react["default"].createElement("option", {
+  }, amLabel), /*#__PURE__*/_react["default"].createElement("option", {
     disabled: pmDisabled,
     value: "pm"
   }, pmLabel));
@@ -4507,7 +4415,7 @@ AmPm.propTypes = {
   ariaLabel: _propTypes["default"].string,
   className: _propTypes["default"].string.isRequired,
   disabled: _propTypes["default"].bool,
-  itemRef: _propTypes["default"].func,
+  inputRef: _propTypes2.isRef,
   locale: _propTypes["default"].string,
   maxTime: _propTypes2.isTime,
   minTime: _propTypes2.isTime,
@@ -4522,15 +4430,14 @@ AmPm.propTypes = {
 /*!**********************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput/Hour12Input.js ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = Hour12Input;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -4546,6 +4453,8 @@ var _dates = __webpack_require__(/*! ../shared/dates */ "./node_modules/react-ti
 var _propTypes2 = __webpack_require__(/*! ../shared/propTypes */ "./node_modules/react-time-picker/dist/shared/propTypes.js");
 
 var _utils = __webpack_require__(/*! ../shared/utils */ "./node_modules/react-time-picker/dist/shared/utils.js");
+
+var _excluded = ["amPm", "hour", "maxTime", "minTime", "value"];
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -4572,25 +4481,44 @@ function _extends() {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
 
+  if (_i == null) return;
   var _arr = [];
   var _n = true;
   var _d = false;
-  var _e = undefined;
+
+  var _s, _e;
 
   try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -4655,7 +4583,7 @@ function Hour12Input(_ref) {
       maxTime = _ref.maxTime,
       minTime = _ref.minTime,
       value = _ref.value,
-      otherProps = _objectWithoutProperties(_ref, ["amPm", "hour", "maxTime", "minTime", "value"]);
+      otherProps = _objectWithoutProperties(_ref, _excluded);
 
   var maxHour = (0, _utils.safeMin)(12, maxTime && function () {
     var _convert24to = (0, _dates.convert24to12)((0, _dateUtils.getHours)(maxTime)),
@@ -4677,15 +4605,15 @@ function Hour12Input(_ref) {
         minAmPm = _convert24to4[1];
 
     if ( // pm is always after am, so we should ignore validation
-    minAmPm !== amPm // If minHour is 12 am/pm, user should be able to enter 12, 1, ..., 11.
-    || minHourResult === 12) {
+    minAmPm !== amPm || // If minHour is 12 am/pm, user should be able to enter 12, 1, ..., 11.
+    minHourResult === 12) {
       return null;
     }
 
     return minHourResult;
   }());
-  var value12 = value !== null ? (0, _dates.convert24to12)(value)[0] : null;
-  return _react["default"].createElement(_Input["default"], _extends({
+  var value12 = value ? (0, _dates.convert24to12)(value)[0].toString() : '';
+  return /*#__PURE__*/_react["default"].createElement(_Input["default"], _extends({
     max: maxHour,
     min: minHour,
     name: "hour12",
@@ -4699,8 +4627,8 @@ Hour12Input.propTypes = {
   ariaLabel: _propTypes["default"].string,
   className: _propTypes["default"].string.isRequired,
   disabled: _propTypes["default"].bool,
-  hour: _propTypes["default"].number,
-  itemRef: _propTypes["default"].func,
+  hour: _propTypes["default"].string,
+  inputRef: _propTypes2.isRef,
   maxTime: _propTypes2.isTime,
   minTime: _propTypes2.isTime,
   onChange: _propTypes["default"].func,
@@ -4709,7 +4637,7 @@ Hour12Input.propTypes = {
   placeholder: _propTypes["default"].string,
   required: _propTypes["default"].bool,
   showLeadingZeros: _propTypes["default"].bool,
-  value: _propTypes["default"].number
+  value: _propTypes["default"].string
 };
 
 /***/ }),
@@ -4718,15 +4646,14 @@ Hour12Input.propTypes = {
 /*!**********************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput/Hour24Input.js ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = Hour24Input;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -4740,6 +4667,8 @@ var _Input = _interopRequireDefault(__webpack_require__(/*! ./Input */ "./node_m
 var _propTypes2 = __webpack_require__(/*! ../shared/propTypes */ "./node_modules/react-time-picker/dist/shared/propTypes.js");
 
 var _utils = __webpack_require__(/*! ../shared/utils */ "./node_modules/react-time-picker/dist/shared/utils.js");
+
+var _excluded = ["hour", "maxTime", "minTime"];
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -4805,11 +4734,11 @@ function Hour24Input(_ref) {
   var hour = _ref.hour,
       maxTime = _ref.maxTime,
       minTime = _ref.minTime,
-      otherProps = _objectWithoutProperties(_ref, ["hour", "maxTime", "minTime"]);
+      otherProps = _objectWithoutProperties(_ref, _excluded);
 
   var maxHour = (0, _utils.safeMin)(23, maxTime && (0, _dateUtils.getHours)(maxTime));
   var minHour = (0, _utils.safeMax)(0, minTime && (0, _dateUtils.getHours)(minTime));
-  return _react["default"].createElement(_Input["default"], _extends({
+  return /*#__PURE__*/_react["default"].createElement(_Input["default"], _extends({
     max: maxHour,
     min: minHour,
     name: "hour24",
@@ -4821,8 +4750,8 @@ Hour24Input.propTypes = {
   ariaLabel: _propTypes["default"].string,
   className: _propTypes["default"].string.isRequired,
   disabled: _propTypes["default"].bool,
-  hour: _propTypes["default"].number,
-  itemRef: _propTypes["default"].func,
+  hour: _propTypes["default"].string,
+  inputRef: _propTypes2.isRef,
   maxTime: _propTypes2.isTime,
   minTime: _propTypes2.isTime,
   onChange: _propTypes["default"].func,
@@ -4831,7 +4760,7 @@ Hour24Input.propTypes = {
   placeholder: _propTypes["default"].string,
   required: _propTypes["default"].bool,
   showLeadingZeros: _propTypes["default"].bool,
-  value: _propTypes["default"].number
+  value: _propTypes["default"].string
 };
 
 /***/ }),
@@ -4840,8 +4769,7 @@ Hour24Input.propTypes = {
 /*!****************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput/Input.js ***!
   \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
@@ -4849,22 +4777,16 @@ Hour24Input.propTypes = {
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
 }
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = Input;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -4873,21 +4795,23 @@ var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ ".
 
 var _mergeClassNames = _interopRequireDefault(__webpack_require__(/*! merge-class-names */ "./node_modules/merge-class-names/dist/esm/index.js"));
 
+var _mergeRefs = _interopRequireDefault(__webpack_require__(/*! merge-refs */ "./node_modules/merge-refs/dist/esm/index.js"));
+
 var _updateInputWidth = _interopRequireWildcard(__webpack_require__(/*! update-input-width */ "./node_modules/update-input-width/dist/esm/index.js"));
 
-function _getRequireWildcardCache() {
+var _propTypes2 = __webpack_require__(/*! ../shared/propTypes */ "./node_modules/react-time-picker/dist/shared/propTypes.js");
+
+function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
+  var cacheBabelInterop = new WeakMap();
+  var cacheNodeInterop = new WeakMap();
+  return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) {
+    return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+  })(nodeInterop);
 }
 
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
+function _interopRequireWildcard(obj, nodeInterop) {
+  if (!nodeInterop && obj && obj.__esModule) {
     return obj;
   }
 
@@ -4897,7 +4821,7 @@ function _interopRequireWildcard(obj) {
     };
   }
 
-  var cache = _getRequireWildcardCache();
+  var cache = _getRequireWildcardCache(nodeInterop);
 
   if (cache && cache.has(obj)) {
     return cache.get(obj);
@@ -4907,7 +4831,7 @@ function _interopRequireWildcard(obj) {
   var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
 
   for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
       var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
 
       if (desc && (desc.get || desc.set)) {
@@ -4935,11 +4859,19 @@ function _interopRequireDefault(obj) {
 /* eslint-disable jsx-a11y/no-autofocus */
 
 
+var isIEOrEdgeLegacy = typeof window !== 'undefined' && /(MSIE|Trident\/|Edge\/)/.test(window.navigator.userAgent);
+var isFirefox = typeof window !== 'undefined' && /Firefox/.test(window.navigator.userAgent);
+
 function onFocus(event) {
   var target = event.target;
-  requestAnimationFrame(function () {
-    return target.select();
-  });
+
+  if (isIEOrEdgeLegacy) {
+    requestAnimationFrame(function () {
+      return target.select();
+    });
+  } else {
+    target.select();
+  }
 }
 
 function updateInputWidthOnFontLoad(element) {
@@ -4966,26 +4898,42 @@ function updateInputWidthOnFontLoad(element) {
   document.fonts.addEventListener('loadingdone', onLoadingDone);
 }
 
-function getSelectionString() {
-  if (typeof window === 'undefined') {
-    return null;
+function getSelectionString(input) {
+  /**
+   * window.getSelection().toString() returns empty string in IE11 and Firefox,
+   * so alternatives come first.
+   */
+  if (input && 'selectionStart' in input && input.selectionStart !== null) {
+    return input.value.slice(input.selectionStart, input.selectionEnd);
   }
 
-  return window.getSelection().toString();
+  if ('getSelection' in window) {
+    return window.getSelection().toString();
+  }
+
+  return null;
 }
 
-var numberRegExp = /[0-9]/;
-
 function makeOnKeyPress(maxLength) {
+  /**
+   * Prevents keystrokes that would not produce a number or when value after keystroke would
+   * exceed maxLength.
+   */
   return function onKeyPress(event) {
-    var selection = getSelectionString();
-    var value = event.target.value;
-
-    if (numberRegExp.test(event.key) && (selection || value.length < maxLength)) {
+    if (isFirefox) {
+      // See https://github.com/wojtekmaj/react-time-picker/issues/92
       return;
     }
 
-    event.preventDefault();
+    var key = event.key,
+        input = event.target;
+    var value = input.value;
+    var isNumberKey = key.length === 1 && /\d/.test(key);
+    var selection = getSelectionString(input);
+
+    if (!isNumberKey || !(selection || value.length < maxLength)) {
+      event.preventDefault();
+    }
   };
 }
 
@@ -4994,7 +4942,7 @@ function Input(_ref) {
       autoFocus = _ref.autoFocus,
       className = _ref.className,
       disabled = _ref.disabled,
-      itemRef = _ref.itemRef,
+      inputRef = _ref.inputRef,
       max = _ref.max,
       min = _ref.min,
       name = _ref.name,
@@ -5008,18 +4956,20 @@ function Input(_ref) {
       showLeadingZeros = _ref.showLeadingZeros,
       step = _ref.step,
       value = _ref.value;
-  var hasLeadingZero = showLeadingZeros && value !== null && value < 10;
-  var maxLength = max.toString().length;
-  return [hasLeadingZero && _react["default"].createElement("span", {
+  var hasLeadingZero = showLeadingZeros && value && value < 10 && (value === '0' || !value.toString().startsWith('0'));
+  var maxLength = max ? max.toString().length : null;
+  return [hasLeadingZero && /*#__PURE__*/_react["default"].createElement("span", {
     key: "leadingZero",
     className: "".concat(className, "__leadingZero")
-  }, "0"), _react["default"].createElement("input", {
+  }, "0"), /*#__PURE__*/_react["default"].createElement("input", {
     key: "input",
     "aria-label": ariaLabel,
     autoComplete: "off",
     autoFocus: autoFocus,
     className: (0, _mergeClassNames["default"])("".concat(className, "__input"), "".concat(className, "__").concat(nameForClass || name), hasLeadingZero && "".concat(className, "__input--hasLeadingZero")),
+    "data-input": "true",
     disabled: disabled,
+    inputMode: "numeric",
     max: max,
     min: min,
     name: name,
@@ -5035,16 +4985,7 @@ function Input(_ref) {
       }
     },
     placeholder: placeholder,
-    ref: function ref(_ref2) {
-      if (_ref2) {
-        (0, _updateInputWidth["default"])(_ref2);
-        updateInputWidthOnFontLoad(_ref2);
-      }
-
-      if (itemRef) {
-        itemRef(_ref2, name);
-      }
-    },
+    ref: (0, _mergeRefs["default"])(_updateInputWidth["default"], updateInputWidthOnFontLoad, inputRef),
     required: required,
     step: step,
     type: "number",
@@ -5054,17 +4995,22 @@ function Input(_ref) {
 
 Input.propTypes = {
   ariaLabel: _propTypes["default"].string,
+  autoFocus: _propTypes["default"].bool,
   className: _propTypes["default"].string.isRequired,
   disabled: _propTypes["default"].bool,
-  itemRef: _propTypes["default"].func,
+  inputRef: _propTypes2.isRef,
   max: _propTypes["default"].number,
   min: _propTypes["default"].number,
+  name: _propTypes["default"].string,
+  nameForClass: _propTypes["default"].string,
   onChange: _propTypes["default"].func,
   onKeyDown: _propTypes["default"].func,
+  onKeyUp: _propTypes["default"].func,
+  placeholder: _propTypes["default"].string,
   required: _propTypes["default"].bool,
   showLeadingZeros: _propTypes["default"].bool,
   step: _propTypes["default"].number,
-  value: _propTypes["default"].number
+  value: _propTypes["default"].string
 };
 
 /***/ }),
@@ -5073,15 +5019,14 @@ Input.propTypes = {
 /*!**********************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput/MinuteInput.js ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = MinuteInput;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -5095,6 +5040,8 @@ var _Input = _interopRequireDefault(__webpack_require__(/*! ./Input */ "./node_m
 var _propTypes2 = __webpack_require__(/*! ../shared/propTypes */ "./node_modules/react-time-picker/dist/shared/propTypes.js");
 
 var _utils = __webpack_require__(/*! ../shared/utils */ "./node_modules/react-time-picker/dist/shared/utils.js");
+
+var _excluded = ["hour", "maxTime", "minTime", "showLeadingZeros"];
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -5162,15 +5109,15 @@ function MinuteInput(_ref) {
       minTime = _ref.minTime,
       _ref$showLeadingZeros = _ref.showLeadingZeros,
       showLeadingZeros = _ref$showLeadingZeros === void 0 ? true : _ref$showLeadingZeros,
-      otherProps = _objectWithoutProperties(_ref, ["hour", "maxTime", "minTime", "showLeadingZeros"]);
+      otherProps = _objectWithoutProperties(_ref, _excluded);
 
   function isSameHour(date) {
-    return date && hour === (0, _dateUtils.getHours)(date);
+    return date && hour === (0, _dateUtils.getHours)(date).toString();
   }
 
   var maxMinute = (0, _utils.safeMin)(59, isSameHour(maxTime) && (0, _dateUtils.getMinutes)(maxTime));
   var minMinute = (0, _utils.safeMax)(0, isSameHour(minTime) && (0, _dateUtils.getMinutes)(minTime));
-  return _react["default"].createElement(_Input["default"], _extends({
+  return /*#__PURE__*/_react["default"].createElement(_Input["default"], _extends({
     max: maxMinute,
     min: minMinute,
     name: "minute",
@@ -5182,8 +5129,8 @@ MinuteInput.propTypes = {
   ariaLabel: _propTypes["default"].string,
   className: _propTypes["default"].string.isRequired,
   disabled: _propTypes["default"].bool,
-  hour: _propTypes["default"].number,
-  itemRef: _propTypes["default"].func,
+  hour: _propTypes["default"].string,
+  inputRef: _propTypes2.isRef,
   maxTime: _propTypes2.isTime,
   minTime: _propTypes2.isTime,
   onChange: _propTypes["default"].func,
@@ -5192,7 +5139,7 @@ MinuteInput.propTypes = {
   placeholder: _propTypes["default"].string,
   required: _propTypes["default"].bool,
   showLeadingZeros: _propTypes["default"].bool,
-  value: _propTypes["default"].number
+  value: _propTypes["default"].string
 };
 
 /***/ }),
@@ -5201,15 +5148,14 @@ MinuteInput.propTypes = {
 /*!**********************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput/NativeInput.js ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = NativeInput;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -5275,7 +5221,7 @@ function NativeInput(_ref) {
     event.stopPropagation();
   }
 
-  return _react["default"].createElement("input", {
+  return /*#__PURE__*/_react["default"].createElement("input", {
     "aria-label": ariaLabel,
     disabled: disabled,
     max: maxTime ? nativeValueParser(maxTime) : null,
@@ -5288,8 +5234,7 @@ function NativeInput(_ref) {
     style: {
       visibility: 'hidden',
       position: 'absolute',
-      top: '-9999px',
-      left: '-9999px'
+      zIndex: '-999'
     },
     type: "time",
     value: value ? nativeValueParser(value) : ''
@@ -5314,15 +5259,14 @@ NativeInput.propTypes = {
 /*!**********************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimeInput/SecondInput.js ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = SecondInput;
 
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
@@ -5336,6 +5280,8 @@ var _Input = _interopRequireDefault(__webpack_require__(/*! ./Input */ "./node_m
 var _propTypes2 = __webpack_require__(/*! ../shared/propTypes */ "./node_modules/react-time-picker/dist/shared/propTypes.js");
 
 var _utils = __webpack_require__(/*! ../shared/utils */ "./node_modules/react-time-picker/dist/shared/utils.js");
+
+var _excluded = ["hour", "maxTime", "minTime", "minute", "showLeadingZeros"];
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -5404,15 +5350,15 @@ function SecondInput(_ref) {
       minute = _ref.minute,
       _ref$showLeadingZeros = _ref.showLeadingZeros,
       showLeadingZeros = _ref$showLeadingZeros === void 0 ? true : _ref$showLeadingZeros,
-      otherProps = _objectWithoutProperties(_ref, ["hour", "maxTime", "minTime", "minute", "showLeadingZeros"]);
+      otherProps = _objectWithoutProperties(_ref, _excluded);
 
   function isSameMinute(date) {
-    return date && hour === (0, _dateUtils.getHours)(date) && minute === (0, _dateUtils.getMinutes)(date);
+    return date && hour === (0, _dateUtils.getHours)(date).toString() && minute === (0, _dateUtils.getMinutes)(date).toString();
   }
 
   var maxSecond = (0, _utils.safeMin)(59, isSameMinute(maxTime) && (0, _dateUtils.getSeconds)(maxTime));
   var minSecond = (0, _utils.safeMax)(0, isSameMinute(minTime) && (0, _dateUtils.getSeconds)(minTime));
-  return _react["default"].createElement(_Input["default"], _extends({
+  return /*#__PURE__*/_react["default"].createElement(_Input["default"], _extends({
     max: maxSecond,
     min: minSecond,
     name: "second",
@@ -5424,48 +5370,19 @@ SecondInput.propTypes = {
   ariaLabel: _propTypes["default"].string,
   className: _propTypes["default"].string.isRequired,
   disabled: _propTypes["default"].bool,
-  hour: _propTypes["default"].number,
-  itemRef: _propTypes["default"].func,
+  hour: _propTypes["default"].string,
+  inputRef: _propTypes2.isRef,
   maxTime: _propTypes2.isTime,
   minTime: _propTypes2.isTime,
-  minute: _propTypes["default"].number,
+  minute: _propTypes["default"].string,
   onChange: _propTypes["default"].func,
   onKeyDown: _propTypes["default"].func,
   onKeyUp: _propTypes["default"].func,
   placeholder: _propTypes["default"].string,
   required: _propTypes["default"].bool,
   showLeadingZeros: _propTypes["default"].bool,
-  value: _propTypes["default"].number
+  value: _propTypes["default"].string
 };
-
-/***/ }),
-
-/***/ "./node_modules/react-time-picker/dist/TimePicker.css":
-/*!************************************************************!*\
-  !*** ./node_modules/react-time-picker/dist/TimePicker.css ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../css-loader/dist/cjs.js!./TimePicker.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-time-picker/dist/TimePicker.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-
-
-module.exports = content.locals || {};
 
 /***/ }),
 
@@ -5473,34 +5390,44 @@ module.exports = content.locals || {};
 /*!***********************************************************!*\
   !*** ./node_modules/react-time-picker/dist/TimePicker.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
+}
+
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
-var _makeEventProps = _interopRequireDefault(__webpack_require__(/*! make-event-props */ "./node_modules/make-event-props/dist/entry.js"));
+var _makeEventProps = _interopRequireDefault(__webpack_require__(/*! make-event-props */ "./node_modules/make-event-props/dist/esm/index.js"));
 
 var _mergeClassNames = _interopRequireDefault(__webpack_require__(/*! merge-class-names */ "./node_modules/merge-class-names/dist/esm/index.js"));
 
 var _reactFit = _interopRequireDefault(__webpack_require__(/*! react-fit */ "./node_modules/react-fit/dist/esm/Fit.js"));
 
-var _entry = _interopRequireDefault(__webpack_require__(/*! react-clock/dist/entry.nostyle */ "./node_modules/react-clock/dist/entry.nostyle.js"));
+var _reactClock = _interopRequireDefault(__webpack_require__(/*! react-clock */ "./node_modules/react-clock/dist/esm/index.js"));
 
 var _TimeInput = _interopRequireDefault(__webpack_require__(/*! ./TimeInput */ "./node_modules/react-time-picker/dist/TimeInput.js"));
 
 var _propTypes2 = __webpack_require__(/*! ./shared/propTypes */ "./node_modules/react-time-picker/dist/shared/propTypes.js");
 
-var _utils = __webpack_require__(/*! ./shared/utils */ "./node_modules/react-time-picker/dist/shared/utils.js");
+var _excluded = ["clockClassName", "className", "maxDetail", "onChange", "value"],
+    _excluded2 = ["onChange"];
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
@@ -5508,19 +5435,17 @@ function _interopRequireDefault(obj) {
   };
 }
 
-function _getRequireWildcardCache() {
+function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
+  var cacheBabelInterop = new WeakMap();
+  var cacheNodeInterop = new WeakMap();
+  return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) {
+    return nodeInterop ? cacheNodeInterop : cacheBabelInterop;
+  })(nodeInterop);
 }
 
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
+function _interopRequireWildcard(obj, nodeInterop) {
+  if (!nodeInterop && obj && obj.__esModule) {
     return obj;
   }
 
@@ -5530,7 +5455,7 @@ function _interopRequireWildcard(obj) {
     };
   }
 
-  var cache = _getRequireWildcardCache();
+  var cache = _getRequireWildcardCache(nodeInterop);
 
   if (cache && cache.has(obj)) {
     return cache.get(obj);
@@ -5540,7 +5465,7 @@ function _interopRequireWildcard(obj) {
   var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
 
   for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
       var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
 
       if (desc && (desc.get || desc.set)) {
@@ -5558,22 +5483,6 @@ function _interopRequireWildcard(obj) {
   }
 
   return newObj;
-}
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
 }
 
 function _objectWithoutProperties(source, excluded) {
@@ -5631,25 +5540,44 @@ function _extends() {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
 
+  if (_i == null) return;
   var _arr = [];
   var _n = true;
   var _d = false;
-  var _e = undefined;
+
+  var _s, _e;
 
   try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -5691,30 +5619,10 @@ function _defineProperties(target, props) {
 function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
+  Object.defineProperty(Constructor, "prototype", {
+    writable: false
+  });
   return Constructor;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
 }
 
 function _inherits(subClass, superClass) {
@@ -5729,6 +5637,9 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
+  Object.defineProperty(subClass, "prototype", {
+    writable: false
+  });
   if (superClass) _setPrototypeOf(subClass, superClass);
 }
 
@@ -5739,6 +5650,63 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
+}
+
+function _createSuper(Derived) {
+  var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+  return function _createSuperInternal() {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (hasNativeReflectConstruct) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
+  }
+
+  return _assertThisInitialized(self);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _defineProperty(obj, key, value) {
@@ -5763,9 +5731,9 @@ var outsideActionEvents = ['mousedown', 'focusin', 'touchstart'];
 var TimePicker = /*#__PURE__*/function (_PureComponent) {
   _inherits(TimePicker, _PureComponent);
 
-  function TimePicker() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(TimePicker);
 
+  function TimePicker() {
     var _this;
 
     _classCallCheck(this, TimePicker);
@@ -5774,12 +5742,15 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TimePicker)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _defineProperty(_assertThisInitialized(_this), "state", {});
 
     _defineProperty(_assertThisInitialized(_this), "onOutsideAction", function (event) {
-      if (_this.wrapper && !_this.wrapper.contains(event.target)) {
+      // Try event.composedPath first to handle clicks inside a Shadow DOM.
+      var target = 'composedPath' in event ? event.composedPath()[0] : event.target;
+
+      if (_this.wrapper && !_this.wrapper.contains(target)) {
         _this.closeClock();
       }
     });
@@ -5800,7 +5771,8 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
     _defineProperty(_assertThisInitialized(_this), "onFocus", function (event) {
       var _this$props = _this.props,
           disabled = _this$props.disabled,
-          onFocus = _this$props.onFocus;
+          onFocus = _this$props.onFocus,
+          openClockOnFocus = _this$props.openClockOnFocus;
 
       if (onFocus) {
         onFocus(event);
@@ -5811,7 +5783,19 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
         return;
       }
 
-      _this.openClock();
+      if (openClockOnFocus) {
+        if (event.target.getAttribute('data-select') === 'true') {
+          return;
+        }
+
+        _this.openClock();
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onKeyDown", function (event) {
+      if (event.key === 'Escape') {
+        _this.closeClock();
+      }
     });
 
     _defineProperty(_assertThisInitialized(_this), "openClock", function () {
@@ -5866,13 +5850,19 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
 
       if (isOpen !== prevState.isOpen) {
         this.handleOutsideActionListeners();
-        (0, _utils.callIfDefined)(isOpen ? onClockOpen : onClockClose);
+        var callback = isOpen ? onClockOpen : onClockClose;
+        if (callback) callback();
       }
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       this.handleOutsideActionListeners(false);
+    }
+  }, {
+    key: "eventProps",
+    get: function get() {
+      return (0, _makeEventProps["default"])(this.props);
     }
   }, {
     key: "handleOutsideActionListeners",
@@ -5885,6 +5875,7 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
       outsideActionEvents.forEach(function (eventName) {
         return document[fnName](eventName, _this2.onOutsideAction);
       });
+      document[fnName]('keydown', this.onKeyDown);
     }
   }, {
     key: "renderInputs",
@@ -5931,9 +5922,10 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
         minutePlaceholder: minutePlaceholder,
         secondPlaceholder: secondPlaceholder
       };
-      return _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement("div", {
         className: "".concat(baseClassName, "__wrapper")
-      }, _react["default"].createElement(_TimeInput["default"], _extends({}, ariaLabelProps, placeholderProps, {
+      }, /*#__PURE__*/_react["default"].createElement(_TimeInput["default"], _extends({}, ariaLabelProps, placeholderProps, {
+        // eslint-disable-next-line jsx-a11y/no-autofocus
         autoFocus: autoFocus,
         className: "".concat(baseClassName, "__inputGroup"),
         disabled: disabled,
@@ -5948,14 +5940,14 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
         placeholder: this.placeholder,
         required: required,
         value: valueFrom
-      })), clearIcon !== null && _react["default"].createElement("button", {
+      })), clearIcon !== null && /*#__PURE__*/_react["default"].createElement("button", {
         "aria-label": clearAriaLabel,
         className: "".concat(baseClassName, "__clear-button ").concat(baseClassName, "__button"),
         disabled: disabled,
         onClick: this.clear,
         onFocus: this.stopPropagation,
         type: "button"
-      }, clearIcon), clockIcon !== null && !disableClock && _react["default"].createElement("button", {
+      }, clearIcon), clockIcon !== null && !disableClock && /*#__PURE__*/_react["default"].createElement("button", {
         "aria-label": clockAriaLabel,
         className: "".concat(baseClassName, "__clock-button ").concat(baseClassName, "__button"),
         disabled: disabled,
@@ -5981,7 +5973,7 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
           maxDetail = _this$props4.maxDetail,
           onChange = _this$props4.onChange,
           value = _this$props4.value,
-          clockProps = _objectWithoutProperties(_this$props4, ["clockClassName", "className", "maxDetail", "onChange", "value"]);
+          clockProps = _objectWithoutProperties(_this$props4, _excluded);
 
       var className = "".concat(baseClassName, "__clock");
 
@@ -5990,9 +5982,14 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
           valueFrom = _concat4[0];
 
       var maxDetailIndex = allViews.indexOf(maxDetail);
-      return _react["default"].createElement(_reactFit["default"], null, _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement(_reactFit["default"], null, /*#__PURE__*/_react["default"].createElement("div", {
+        ref: function ref(_ref) {
+          if (_ref && !isOpen) {
+            _ref.removeAttribute('style');
+          }
+        },
         className: (0, _mergeClassNames["default"])(className, "".concat(className, "--").concat(isOpen ? 'open' : 'closed'))
-      }, _react["default"].createElement(_entry["default"], _extends({
+      }, /*#__PURE__*/_react["default"].createElement(_reactClock["default"], _extends({
         className: clockClassName,
         renderMinuteHand: maxDetailIndex > 0,
         renderSecondHand: maxDetailIndex > 1,
@@ -6004,27 +6001,27 @@ var TimePicker = /*#__PURE__*/function (_PureComponent) {
     value: function render() {
       var _this3 = this;
 
+      var eventProps = this.eventProps;
       var _this$props5 = this.props,
           className = _this$props5.className,
           disabled = _this$props5.disabled;
       var isOpen = this.state.isOpen;
-      return _react["default"].createElement("div", _extends({
+
+      var onChange = eventProps.onChange,
+          eventPropsWithoutOnChange = _objectWithoutProperties(eventProps, _excluded2);
+
+      return /*#__PURE__*/_react["default"].createElement("div", _extends({
         className: (0, _mergeClassNames["default"])(baseClassName, "".concat(baseClassName, "--").concat(isOpen ? 'open' : 'closed'), "".concat(baseClassName, "--").concat(disabled ? 'disabled' : 'enabled'), className)
-      }, this.eventProps, {
+      }, eventPropsWithoutOnChange, {
         onFocus: this.onFocus,
-        ref: function ref(_ref) {
-          if (!_ref) {
+        ref: function ref(_ref2) {
+          if (!_ref2) {
             return;
           }
 
-          _this3.wrapper = _ref;
+          _this3.wrapper = _ref2;
         }
       }), this.renderInputs(), this.renderClock());
-    }
-  }, {
-    key: "eventProps",
-    get: function get() {
-      return (0, _makeEventProps["default"])(this.props);
     }
   }], [{
     key: "getDerivedStateFromProps",
@@ -6053,25 +6050,25 @@ var iconProps = {
   strokeWidth: 2
 };
 
-var ClockIcon = _react["default"].createElement("svg", _extends({}, iconProps, {
+var ClockIcon = /*#__PURE__*/_react["default"].createElement("svg", _extends({}, iconProps, {
   className: "".concat(baseClassName, "__clock-button__icon ").concat(baseClassName, "__button__icon"),
   fill: "none"
-}), _react["default"].createElement("circle", {
+}), /*#__PURE__*/_react["default"].createElement("circle", {
   cx: "9.5",
   cy: "9.5",
   r: "7.5"
-}), _react["default"].createElement("path", {
+}), /*#__PURE__*/_react["default"].createElement("path", {
   d: "M9.5 4.5 v5 h4"
 }));
 
-var ClearIcon = _react["default"].createElement("svg", _extends({}, iconProps, {
+var ClearIcon = /*#__PURE__*/_react["default"].createElement("svg", _extends({}, iconProps, {
   className: "".concat(baseClassName, "__clear-button__icon ").concat(baseClassName, "__button__icon")
-}), _react["default"].createElement("line", {
+}), /*#__PURE__*/_react["default"].createElement("line", {
   x1: "4",
   x2: "15",
   y1: "4",
   y2: "15"
-}), _react["default"].createElement("line", {
+}), /*#__PURE__*/_react["default"].createElement("line", {
   x1: "15",
   x2: "4",
   y1: "4",
@@ -6083,7 +6080,8 @@ TimePicker.defaultProps = {
   clockIcon: ClockIcon,
   closeClock: true,
   isOpen: null,
-  maxDetail: 'minute'
+  maxDetail: 'minute',
+  openClockOnFocus: true
 };
 
 var isValue = _propTypes["default"].oneOfType([_propTypes2.isTime, _propTypes["default"].instanceOf(Date)]);
@@ -6116,6 +6114,7 @@ TimePicker.propTypes = {
   onClockClose: _propTypes["default"].func,
   onClockOpen: _propTypes["default"].func,
   onFocus: _propTypes["default"].func,
+  openClockOnFocus: _propTypes["default"].bool,
   required: _propTypes["default"].bool,
   secondAriaLabel: _propTypes["default"].string,
   secondPlaceholder: _propTypes["default"].string,
@@ -6128,15 +6127,14 @@ TimePicker.propTypes = {
 /*!******************************************************!*\
   !*** ./node_modules/react-time-picker/dist/entry.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports["default"] = void 0;
 
 __webpack_require__(/*! react-clock/dist/Clock.css */ "./node_modules/react-clock/dist/Clock.css");
@@ -6162,16 +6160,16 @@ exports["default"] = _default;
 /*!*********************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/shared/dateFormatter.js ***!
   \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports.getFormatter = getFormatter;
+exports.getNumberFormatter = getNumberFormatter;
 
 var _getUserLocale = _interopRequireDefault(__webpack_require__(/*! get-user-locale */ "./node_modules/get-user-locale/dist/esm/index.js"));
 
@@ -6180,12 +6178,44 @@ function _interopRequireDefault(obj) {
     "default": obj
   };
 }
-/* eslint-disable import/prefer-default-export */
 
+var formatterCache = new Map();
 
 function getFormatter(options) {
   return function (locale, date) {
-    return date.toLocaleString(locale || (0, _getUserLocale["default"])(), options);
+    var localeWithDefault = locale || (0, _getUserLocale["default"])();
+
+    if (!formatterCache.has(localeWithDefault)) {
+      formatterCache.set(localeWithDefault, new Map());
+    }
+
+    var formatterCacheLocale = formatterCache.get(localeWithDefault);
+
+    if (!formatterCacheLocale.has(options)) {
+      formatterCacheLocale.set(options, new Intl.DateTimeFormat(localeWithDefault, options).format);
+    }
+
+    return formatterCacheLocale.get(options)(date);
+  };
+}
+
+var numberFormatterCache = new Map();
+
+function getNumberFormatter(options) {
+  return function (locale, date) {
+    var localeWithDefault = locale || (0, _getUserLocale["default"])();
+
+    if (!numberFormatterCache.has(localeWithDefault)) {
+      numberFormatterCache.set(localeWithDefault, new Map());
+    }
+
+    var numberFormatterCacheLocale = numberFormatterCache.get(localeWithDefault);
+
+    if (!numberFormatterCacheLocale.has(options)) {
+      numberFormatterCacheLocale.set(options, new Intl.NumberFormat(localeWithDefault, options).format);
+    }
+
+    return numberFormatterCacheLocale.get(options)(date);
   };
 }
 
@@ -6195,15 +6225,14 @@ function getFormatter(options) {
 /*!*************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/shared/dates.js ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports.convert12to24 = convert12to24;
 exports.convert24to12 = convert24to12;
 
@@ -6230,16 +6259,15 @@ function convert24to12(hour24) {
 /*!*****************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/shared/propTypes.js ***!
   \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
-exports.isValueType = exports.isTime = void 0;
+}));
+exports.isValueType = exports.isTime = exports.isRef = void 0;
 
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
@@ -6252,17 +6280,11 @@ function _interopRequireDefault(obj) {
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
 }
 
 var allViews = ['hour', 'minute', 'second'];
@@ -6288,70 +6310,87 @@ var isValueType = _propTypes["default"].oneOf(allValueTypes);
 
 exports.isValueType = isValueType;
 
+var isRef = _propTypes["default"].oneOfType([_propTypes["default"].func, _propTypes["default"].shape({
+  current: _propTypes["default"].any
+})]);
+
+exports.isRef = isRef;
+
 /***/ }),
 
 /***/ "./node_modules/react-time-picker/dist/shared/utils.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-time-picker/dist/shared/utils.js ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, "__esModule", ({
   value: true
-});
+}));
 exports.getAmPmLabels = getAmPmLabels;
-exports.safeMin = safeMin;
 exports.safeMax = safeMax;
-exports.callIfDefined = void 0;
+exports.safeMin = safeMin;
 
 var _dateFormatter = __webpack_require__(/*! ./dateFormatter */ "./node_modules/react-time-picker/dist/shared/dateFormatter.js");
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
 
+  if (_i == null) return;
   var _arr = [];
   var _n = true;
   var _d = false;
-  var _e = undefined;
+
+  var _s, _e;
 
   try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -6373,24 +6412,7 @@ function _iterableToArrayLimit(arr, i) {
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
 }
-/**
- * Calls a function, if it's defined, with specified arguments
- * @param {Function} fn
- * @param {Object} args
- */
 
-
-var callIfDefined = function callIfDefined(fn) {
-  if (fn && typeof fn === 'function') {
-    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    fn.apply(void 0, args);
-  }
-};
-
-exports.callIfDefined = callIfDefined;
 var nines = ['9', '٩'];
 var ninesRegExp = new RegExp("[".concat(nines.join(''), "]"));
 var amPmFormatter = (0, _dateFormatter.getFormatter)({
@@ -6435,16 +6457,16 @@ function isValidNumber(num) {
 }
 
 function safeMin() {
-  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    args[_key2] = arguments[_key2];
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
   }
 
   return Math.min.apply(Math, _toConsumableArray(args.filter(isValidNumber)));
 }
 
 function safeMax() {
-  for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-    args[_key3] = arguments[_key3];
+  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    args[_key2] = arguments[_key2];
   }
 
   return Math.max.apply(Math, _toConsumableArray(args.filter(isValidNumber)));
@@ -6452,283 +6474,38 @@ function safeMax() {
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/tiny-warning/dist/tiny-warning.esm.js":
+/*!************************************************************!*\
+  !*** ./node_modules/tiny-warning/dist/tiny-warning.esm.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var isProduction = "development" === 'production';
 
-
-var isOldIE = function isOldIE() {
-  var memo;
-  return function memorize() {
-    if (typeof memo === 'undefined') {
-      // Test for IE <= 9 as proposed by Browserhacks
-      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-      // Tests for existence of standard globals is to allow style-loader
-      // to operate correctly into non-standard environments
-      // @see https://github.com/webpack-contrib/style-loader/issues/177
-      memo = Boolean(window && document && document.all && !window.atob);
-    }
-
-    return memo;
-  };
-}();
-
-var getTarget = function getTarget() {
-  var memo = {};
-  return function memorize(target) {
-    if (typeof memo[target] === 'undefined') {
-      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
-
-      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-        try {
-          // This will throw an exception if access to iframe is blocked
-          // due to cross-origin restrictions
-          styleTarget = styleTarget.contentDocument.head;
-        } catch (e) {
-          // istanbul ignore next
-          styleTarget = null;
-        }
-      }
-
-      memo[target] = styleTarget;
-    }
-
-    return memo[target];
-  };
-}();
-
-var stylesInDom = [];
-
-function getIndexByIdentifier(identifier) {
-  var result = -1;
-
-  for (var i = 0; i < stylesInDom.length; i++) {
-    if (stylesInDom[i].identifier === identifier) {
-      result = i;
-      break;
-    }
-  }
-
-  return result;
-}
-
-function modulesToDom(list, options) {
-  var idCountMap = {};
-  var identifiers = [];
-
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = options.base ? item[0] + options.base : item[0];
-    var count = idCountMap[id] || 0;
-    var identifier = "".concat(id, " ").concat(count);
-    idCountMap[id] = count + 1;
-    var index = getIndexByIdentifier(identifier);
-    var obj = {
-      css: item[1],
-      media: item[2],
-      sourceMap: item[3]
-    };
-
-    if (index !== -1) {
-      stylesInDom[index].references++;
-      stylesInDom[index].updater(obj);
-    } else {
-      stylesInDom.push({
-        identifier: identifier,
-        updater: addStyle(obj, options),
-        references: 1
-      });
-    }
-
-    identifiers.push(identifier);
-  }
-
-  return identifiers;
-}
-
-function insertStyleElement(options) {
-  var style = document.createElement('style');
-  var attributes = options.attributes || {};
-
-  if (typeof attributes.nonce === 'undefined') {
-    var nonce =  true ? __webpack_require__.nc : undefined;
-
-    if (nonce) {
-      attributes.nonce = nonce;
-    }
-  }
-
-  Object.keys(attributes).forEach(function (key) {
-    style.setAttribute(key, attributes[key]);
-  });
-
-  if (typeof options.insert === 'function') {
-    options.insert(style);
-  } else {
-    var target = getTarget(options.insert || 'head');
-
-    if (!target) {
-      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-    }
-
-    target.appendChild(style);
-  }
-
-  return style;
-}
-
-function removeStyleElement(style) {
-  // istanbul ignore if
-  if (style.parentNode === null) {
-    return false;
-  }
-
-  style.parentNode.removeChild(style);
-}
-/* istanbul ignore next  */
-
-
-var replaceText = function replaceText() {
-  var textStore = [];
-  return function replace(index, replacement) {
-    textStore[index] = replacement;
-    return textStore.filter(Boolean).join('\n');
-  };
-}();
-
-function applyToSingletonTag(style, index, remove, obj) {
-  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
-
-  /* istanbul ignore if  */
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = replaceText(index, css);
-  } else {
-    var cssNode = document.createTextNode(css);
-    var childNodes = style.childNodes;
-
-    if (childNodes[index]) {
-      style.removeChild(childNodes[index]);
-    }
-
-    if (childNodes.length) {
-      style.insertBefore(cssNode, childNodes[index]);
-    } else {
-      style.appendChild(cssNode);
-    }
-  }
-}
-
-function applyToTag(style, options, obj) {
-  var css = obj.css;
-  var media = obj.media;
-  var sourceMap = obj.sourceMap;
-
-  if (media) {
-    style.setAttribute('media', media);
-  } else {
-    style.removeAttribute('media');
-  }
-
-  if (sourceMap && btoa) {
-    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  } // For old IE
-
-  /* istanbul ignore if  */
-
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    while (style.firstChild) {
-      style.removeChild(style.firstChild);
-    }
-
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var singleton = null;
-var singletonCounter = 0;
-
-function addStyle(obj, options) {
-  var style;
-  var update;
-  var remove;
-
-  if (options.singleton) {
-    var styleIndex = singletonCounter++;
-    style = singleton || (singleton = insertStyleElement(options));
-    update = applyToSingletonTag.bind(null, style, styleIndex, false);
-    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-  } else {
-    style = insertStyleElement(options);
-    update = applyToTag.bind(null, style, options);
-
-    remove = function remove() {
-      removeStyleElement(style);
-    };
-  }
-
-  update(obj);
-  return function updateStyle(newObj) {
-    if (newObj) {
-      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
-        return;
-      }
-
-      update(obj = newObj);
-    } else {
-      remove();
-    }
-  };
-}
-
-module.exports = function (list, options) {
-  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-  // tags it will allow on a page
-
-  if (!options.singleton && typeof options.singleton !== 'boolean') {
-    options.singleton = isOldIE();
-  }
-
-  list = list || [];
-  var lastIdentifiers = modulesToDom(list, options);
-  return function update(newList) {
-    newList = newList || [];
-
-    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+function warning(condition, message) {
+  if (!isProduction) {
+    if (condition) {
       return;
     }
 
-    for (var i = 0; i < lastIdentifiers.length; i++) {
-      var identifier = lastIdentifiers[i];
-      var index = getIndexByIdentifier(identifier);
-      stylesInDom[index].references--;
+    var text = "Warning: " + message;
+
+    if (typeof console !== 'undefined') {
+      console.warn(text);
     }
 
-    var newLastIdentifiers = modulesToDom(newList, options);
+    try {
+      throw Error(text);
+    } catch (x) {}
+  }
+}
 
-    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
-      var _identifier = lastIdentifiers[_i];
-
-      var _index = getIndexByIdentifier(_identifier);
-
-      if (stylesInDom[_index].references === 0) {
-        stylesInDom[_index].updater();
-
-        stylesInDom.splice(_index, 1);
-      }
-    }
-
-    lastIdentifiers = newLastIdentifiers;
-  };
-};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (warning);
 
 /***/ }),
 
@@ -6736,14 +6513,16 @@ module.exports = function (list, options) {
 /*!***********************************************************!*\
   !*** ./node_modules/update-input-width/dist/esm/index.js ***!
   \***********************************************************/
-/*! exports provided: getFontShorthand, measureText, updateInputWidth, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFontShorthand", function() { return getFontShorthand; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "measureText", function() { return measureText; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateInputWidth", function() { return updateInputWidth; });
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getFontShorthand": () => (/* binding */ getFontShorthand),
+/* harmony export */   "measureText": () => (/* binding */ measureText),
+/* harmony export */   "updateInputWidth": () => (/* binding */ updateInputWidth),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 var allowedVariants = ['normal', 'small-caps'];
 /**
  * Gets font CSS shorthand property given element.
@@ -6752,6 +6531,10 @@ var allowedVariants = ['normal', 'small-caps'];
  */
 
 function getFontShorthand(element) {
+  if (!element) {
+    return '';
+  }
+
   var style = window.getComputedStyle(element);
 
   if (style.font) {
@@ -6770,8 +6553,8 @@ function getFontShorthand(element) {
 /**
  * Measures text width given text and font CSS shorthand.
  *
- * @param {String} text Text to measure
- * @param {String} font Font to use when measuring the text
+ * @param {string} text Text to measure
+ * @param {string} font Font to use when measuring the text
  */
 
 function measureText(text, font) {
@@ -6795,7 +6578,7 @@ function measureText(text, font) {
  */
 
 function updateInputWidth(element) {
-  if (typeof window === 'undefined') {
+  if (typeof window === 'undefined' || !element) {
     return null;
   }
 
@@ -6810,23 +6593,598 @@ function updateInputWidth(element) {
   element.style.width = "".concat(width, "px");
   return width;
 }
-/* harmony default export */ __webpack_exports__["default"] = (updateInputWidth);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (updateInputWidth);
 
 /***/ }),
 
-/***/ "./srcjs/time.jsx":
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-clock/dist/Clock.css":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/react-clock/dist/Clock.css ***!
+  \***************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".react-clock {\n  display: block;\n  position: relative;\n}\n.react-clock,\n.react-clock *,\n.react-clock *:before,\n.react-clock *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-clock__face {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  border: 1px solid black;\n  border-radius: 50%;\n}\n.react-clock__hand {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__hand__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__mark__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark__number {\n  position: absolute;\n  left: -40px;\n  width: 80px;\n  text-align: center;\n}\n.react-clock__second-hand__body {\n  background-color: red;\n}\n", "",{"version":3,"sources":["webpack://./node_modules/react-clock/dist/Clock.css"],"names":[],"mappings":"AAAA;EACE,cAAc;EACd,kBAAkB;AACpB;AACA;;;;EAIE,2BAA2B;EAC3B,8BAA8B;EAC9B,sBAAsB;AACxB;AACA;EACE,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,OAAO;EACP,QAAQ;EACR,uBAAuB;EACvB,kBAAkB;AACpB;AACA;EACE,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,SAAS;EACT,UAAU;AACZ;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,2BAA2B;AAC7B;AACA;EACE,kBAAkB;EAClB,MAAM;EACN,SAAS;EACT,SAAS;EACT,UAAU;AACZ;AACA;EACE,kBAAkB;EAClB,uBAAuB;EACvB,2BAA2B;AAC7B;AACA;EACE,kBAAkB;EAClB,WAAW;EACX,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,qBAAqB;AACvB","sourcesContent":[".react-clock {\n  display: block;\n  position: relative;\n}\n.react-clock,\n.react-clock *,\n.react-clock *:before,\n.react-clock *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-clock__face {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  border: 1px solid black;\n  border-radius: 50%;\n}\n.react-clock__hand {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__hand__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 50%;\n  right: 50%;\n}\n.react-clock__mark__body {\n  position: absolute;\n  background-color: black;\n  transform: translateX(-50%);\n}\n.react-clock__mark__number {\n  position: absolute;\n  left: -40px;\n  width: 80px;\n  text-align: center;\n}\n.react-clock__second-hand__body {\n  background-color: red;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-time-picker/dist/TimePicker.css":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/react-time-picker/dist/TimePicker.css ***!
+  \**************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".react-time-picker {\n  display: inline-flex;\n  position: relative;\n}\n.react-time-picker,\n.react-time-picker *,\n.react-time-picker *:before,\n.react-time-picker *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-time-picker--disabled {\n  background-color: #f0f0f0;\n  color: #6d6d6d;\n}\n.react-time-picker__wrapper {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  border: thin solid gray;\n}\n.react-time-picker__inputGroup {\n  min-width: calc((4px * 3) +  0.54em * 6  +  0.217em * 2);\n  flex-grow: 1;\n  padding: 0 2px;\n  box-sizing: content-box;\n}\n.react-time-picker__inputGroup__divider {\n  padding: 1px 0;\n  white-space: pre;\n}\n.react-time-picker__inputGroup__input {\n  min-width: 0.54em;\n  height: 100%;\n  position: relative;\n  padding: 0 1px;\n  border: 0;\n  background: none;\n  font: inherit;\n  box-sizing: content-box;\n  -moz-appearance: textfield;\n}\n.react-time-picker__inputGroup__input::-webkit-outer-spin-button,\n.react-time-picker__inputGroup__input::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.react-time-picker__inputGroup__input:invalid {\n  background: rgba(255, 0, 0, 0.1);\n}\n.react-time-picker__inputGroup__input--hasLeadingZero {\n  margin-left: -0.54em;\n  padding-left: calc(1px +  0.54em);\n}\n.react-time-picker__inputGroup__amPm {\n  font: inherit;\n  -moz-appearance: menulist;\n}\n.react-time-picker__button {\n  border: 0;\n  background: transparent;\n  padding: 4px 6px;\n}\n.react-time-picker__button:enabled {\n  cursor: pointer;\n}\n.react-time-picker__button:enabled:hover .react-time-picker__button__icon,\n.react-time-picker__button:enabled:focus .react-time-picker__button__icon {\n  stroke: #0078d7;\n}\n.react-time-picker__button:disabled .react-time-picker__button__icon {\n  stroke: #6d6d6d;\n}\n.react-time-picker__button svg {\n  display: inherit;\n}\n.react-time-picker__clock {\n  width: 200px;\n  height: 200px;\n  max-width: 100vw;\n  padding: 25px;\n  background-color: white;\n  border: thin solid #a0a096;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1;\n}\n.react-time-picker__clock--closed {\n  display: none;\n}\n", "",{"version":3,"sources":["webpack://./node_modules/react-time-picker/dist/TimePicker.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,kBAAkB;AACpB;AACA;;;;EAIE,2BAA2B;EAC3B,8BAA8B;EAC9B,sBAAsB;AACxB;AACA;EACE,yBAAyB;EACzB,cAAc;AAChB;AACA;EACE,aAAa;EACb,YAAY;EACZ,cAAc;EACd,uBAAuB;AACzB;AACA;EACE,wDAAwD;EACxD,YAAY;EACZ,cAAc;EACd,uBAAuB;AACzB;AACA;EACE,cAAc;EACd,gBAAgB;AAClB;AACA;EACE,iBAAiB;EACjB,YAAY;EACZ,kBAAkB;EAClB,cAAc;EACd,SAAS;EACT,gBAAgB;EAChB,aAAa;EACb,uBAAuB;EACvB,0BAA0B;AAC5B;AACA;;EAEE,wBAAwB;EACxB,SAAS;AACX;AACA;EACE,gCAAgC;AAClC;AACA;EACE,oBAAoB;EACpB,iCAAiC;AACnC;AACA;EACE,aAAa;EACb,yBAAyB;AAC3B;AACA;EACE,SAAS;EACT,uBAAuB;EACvB,gBAAgB;AAClB;AACA;EACE,eAAe;AACjB;AACA;;EAEE,eAAe;AACjB;AACA;EACE,eAAe;AACjB;AACA;EACE,gBAAgB;AAClB;AACA;EACE,YAAY;EACZ,aAAa;EACb,gBAAgB;EAChB,aAAa;EACb,uBAAuB;EACvB,0BAA0B;EAC1B,kBAAkB;EAClB,SAAS;EACT,OAAO;EACP,UAAU;AACZ;AACA;EACE,aAAa;AACf","sourcesContent":[".react-time-picker {\n  display: inline-flex;\n  position: relative;\n}\n.react-time-picker,\n.react-time-picker *,\n.react-time-picker *:before,\n.react-time-picker *:after {\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n}\n.react-time-picker--disabled {\n  background-color: #f0f0f0;\n  color: #6d6d6d;\n}\n.react-time-picker__wrapper {\n  display: flex;\n  flex-grow: 1;\n  flex-shrink: 0;\n  border: thin solid gray;\n}\n.react-time-picker__inputGroup {\n  min-width: calc((4px * 3) +  0.54em * 6  +  0.217em * 2);\n  flex-grow: 1;\n  padding: 0 2px;\n  box-sizing: content-box;\n}\n.react-time-picker__inputGroup__divider {\n  padding: 1px 0;\n  white-space: pre;\n}\n.react-time-picker__inputGroup__input {\n  min-width: 0.54em;\n  height: 100%;\n  position: relative;\n  padding: 0 1px;\n  border: 0;\n  background: none;\n  font: inherit;\n  box-sizing: content-box;\n  -moz-appearance: textfield;\n}\n.react-time-picker__inputGroup__input::-webkit-outer-spin-button,\n.react-time-picker__inputGroup__input::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.react-time-picker__inputGroup__input:invalid {\n  background: rgba(255, 0, 0, 0.1);\n}\n.react-time-picker__inputGroup__input--hasLeadingZero {\n  margin-left: -0.54em;\n  padding-left: calc(1px +  0.54em);\n}\n.react-time-picker__inputGroup__amPm {\n  font: inherit;\n  -moz-appearance: menulist;\n}\n.react-time-picker__button {\n  border: 0;\n  background: transparent;\n  padding: 4px 6px;\n}\n.react-time-picker__button:enabled {\n  cursor: pointer;\n}\n.react-time-picker__button:enabled:hover .react-time-picker__button__icon,\n.react-time-picker__button:enabled:focus .react-time-picker__button__icon {\n  stroke: #0078d7;\n}\n.react-time-picker__button:disabled .react-time-picker__button__icon {\n  stroke: #6d6d6d;\n}\n.react-time-picker__button svg {\n  display: inherit;\n}\n.react-time-picker__clock {\n  width: 200px;\n  height: 200px;\n  max-width: 100vw;\n  padding: 25px;\n  background-color: white;\n  border: thin solid #a0a096;\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1;\n}\n.react-time-picker__clock--closed {\n  display: none;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/react-clock/dist/Clock.css":
+/*!*************************************************!*\
+  !*** ./node_modules/react-clock/dist/Clock.css ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_dist_cjs_js_Clock_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js!./Clock.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-clock/dist/Clock.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_Clock_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_Clock_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_Clock_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_Clock_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/react-time-picker/dist/TimePicker.css":
+/*!************************************************************!*\
+  !*** ./node_modules/react-time-picker/dist/TimePicker.css ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _css_loader_dist_cjs_js_TimePicker_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js!./TimePicker.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-time-picker/dist/TimePicker.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_TimePicker_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_TimePicker_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _css_loader_dist_cjs_js_TimePicker_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _css_loader_dist_cjs_js_TimePicker_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+var stylesInDOM = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDOM.length; i++) {
+    if (stylesInDOM[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var indexByIdentifier = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3],
+      supports: item[4],
+      layer: item[5]
+    };
+
+    if (indexByIdentifier !== -1) {
+      stylesInDOM[indexByIdentifier].references++;
+      stylesInDOM[indexByIdentifier].updater(obj);
+    } else {
+      var updater = addElementStyle(obj, options);
+      options.byIndex = i;
+      stylesInDOM.splice(i, 0, {
+        identifier: identifier,
+        updater: updater,
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function addElementStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
+
+  var updater = function updater(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
+        return;
+      }
+
+      api.update(obj = newObj);
+    } else {
+      api.remove();
+    }
+  };
+
+  return updater;
+}
+
+module.exports = function (list, options) {
+  options = options || {};
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDOM[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDOM[_index].references === 0) {
+        stylesInDOM[_index].updater();
+
+        stylesInDOM.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+var memo = {};
+/* istanbul ignore next  */
+
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+
+    memo[target] = styleTarget;
+  }
+
+  return memo[target];
+}
+/* istanbul ignore next  */
+
+
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+
+  target.appendChild(style);
+}
+
+module.exports = insertBySelector;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+
+module.exports = insertStyleElement;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+
+module.exports = setAttributesWithoutAttributes;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function apply(styleElement, options, obj) {
+  var css = "";
+
+  if (obj.supports) {
+    css += "@supports (".concat(obj.supports, ") {");
+  }
+
+  if (obj.media) {
+    css += "@media ".concat(obj.media, " {");
+  }
+
+  var needLayer = typeof obj.layer !== "undefined";
+
+  if (needLayer) {
+    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
+  }
+
+  css += obj.css;
+
+  if (needLayer) {
+    css += "}";
+  }
+
+  if (obj.media) {
+    css += "}";
+  }
+
+  if (obj.supports) {
+    css += "}";
+  }
+
+  var sourceMap = obj.sourceMap;
+
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  options.styleTagTransform(css, styleElement, options.options);
+}
+
+function removeStyleElement(styleElement) {
+  // istanbul ignore if
+  if (styleElement.parentNode === null) {
+    return false;
+  }
+
+  styleElement.parentNode.removeChild(styleElement);
+}
+/* istanbul ignore next  */
+
+
+function domAPI(options) {
+  var styleElement = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(styleElement, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(styleElement);
+    }
+  };
+}
+
+module.exports = domAPI;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function styleTagTransform(css, styleElement) {
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css;
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild);
+    }
+
+    styleElement.appendChild(document.createTextNode(css));
+  }
+}
+
+module.exports = styleTagTransform;
+
+/***/ }),
+
+/***/ "react":
+/*!*******************************!*\
+  !*** external "window.React" ***!
+  \*******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window.React;
+
+/***/ }),
+
+/***/ "react-dom":
+/*!**********************************!*\
+  !*** external "window.ReactDOM" ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window.ReactDOM;
+
+/***/ }),
+
+/***/ "reactR":
+/*!********************************!*\
+  !*** external "window.reactR" ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window.reactR;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
 /*!************************!*\
   !*** ./srcjs/time.jsx ***!
   \************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactR__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reactR */ "reactR");
 /* harmony import */ var reactR__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(reactR__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_time_picker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-time-picker */ "./node_modules/react-time-picker/dist/entry.js");
-/* harmony import */ var react_time_picker__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_time_picker__WEBPACK_IMPORTED_MODULE_1__);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
@@ -6836,7 +7194,7 @@ var TimeInput = function TimeInput(_ref) {
   var configuration = _ref.configuration,
       value = _ref.value,
       setValue = _ref.setValue;
-  return /*#__PURE__*/React.createElement(react_time_picker__WEBPACK_IMPORTED_MODULE_1___default.a, _extends({
+  return /*#__PURE__*/React.createElement(react_time_picker__WEBPACK_IMPORTED_MODULE_1__["default"], _extends({
     onChange: function onChange(newTime) {
       return setValue(newTime);
     },
@@ -6844,42 +7202,9 @@ var TimeInput = function TimeInput(_ref) {
   }, configuration));
 };
 
-Object(reactR__WEBPACK_IMPORTED_MODULE_0__["reactShinyInput"])('.time', 'shinieR.time', TimeInput);
+(0,reactR__WEBPACK_IMPORTED_MODULE_0__.reactShinyInput)('.time', 'shinieR.time', TimeInput);
+})();
 
-/***/ }),
-
-/***/ "react":
-/*!*******************************!*\
-  !*** external "window.React" ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = window.React;
-
-/***/ }),
-
-/***/ "react-dom":
-/*!**********************************!*\
-  !*** external "window.ReactDOM" ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = window.ReactDOM;
-
-/***/ }),
-
-/***/ "reactR":
-/*!********************************!*\
-  !*** external "window.reactR" ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = window.reactR;
-
-/***/ })
-
-/******/ });
+/******/ })()
+;
 //# sourceMappingURL=time.js.map
