@@ -1,7 +1,7 @@
 # shinieR
 Shinier inputs for Shiny apps
 
-![shinieR demo](./shinier_demo.gif)
+<img width="1440" alt="Screenshot 2022-02-04 at 17 27 36" src="https://user-images.githubusercontent.com/5170193/152565676-4f20a025-6636-4d73-839e-4729cffce282.png">
 
 ## Installation
 
